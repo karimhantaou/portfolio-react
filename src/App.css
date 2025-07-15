@@ -22,54 +22,55 @@ a{
 .section{
     height: 100vh;
     width: 100%;
+    /*padding: 0 10%;*/
 
     display: flex;
 }
 
 .left-side{
-  width: 70%;
-  height: 100%;
-  padding-left: 10%;
+    width: 70%;
+    height: 100%;
+    padding-left: 10%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
 .right-side{
-  width: 30%;
-  height: 100%;
-  padding: 20px;
+    width: 30%;
+    height: 100%;
+    padding: 20px;
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .right-side-content{
-  height: 35%;
-  display: flex;
+    height: 35%;
+    display: flex;
 }
 
 .vertical-line{
-  height: 100%;
-  width: 1px;
-  background-color: var(--accent-color);
+    height: 100%;
+    width: 1px;
+    background-color: var(--accent-color);
 }
 
 .links{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 10px;
-  margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    margin-left: 10px;
 }
 
 .sommaire-title{
-  font-size: 3rem;
-  color: var(--secondary-color);
-  margin-bottom: 25px;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
 }
 
 .links a{
@@ -97,20 +98,20 @@ a{
 }
 
 .button-cv{
-  margin-top: 60px;
-  margin-bottom: 60px;
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  padding: 15px 40px;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 15px 40px;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .presentation{
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--secondary-color);
-  width: 90%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+    width: 90%;
 }
