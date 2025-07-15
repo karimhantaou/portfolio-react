@@ -1,50 +1,71 @@
-import logo from './logo.svg';
 import './App.css';
+
+import VerticalLine from "./components/VerticalLine";
 
 function App() {
   return (
     <div className="main">
-
-        {/* Partie de gauche */}
-        <div className="left-side">
-
-            <p>Hantaou Karim</p>
-            <p>Développeur Full Stack à la recherche d'une alternance</p>
-            <button>Télécharger mon CV</button>
-
-            <p>
-                Mauris non lectus dignissim, semper lacus ut, tempor erat.
-                Nullam at elementum est, non vehicula dui.
-                In nec tellus id libero convallis semper. Mauris justo risus, viverra nec vulputate vel, sodales sed turpis.
-                In hac habitasse platea dictumst. Duis consectetur vestibulum justo, ac luctus justo dapibus ut.
-                Nam eget finibus odio, ut aliquam dolor.
-                Donec lectus orci, bibendum sed bibendum feugiat, tincidunt ut nibh.
-                Aenean at massa tristique, aliquam diam at, consectetur dolor. Morbi quis dignissim ante.
-            </p>
-
-        </div>
+    {/* DEBUT */}
 
 
-        {/* Partie de droite */}
-        <div className="right-side">
 
-            <div className="right-side-content">
+        {/* Section d'intro */}
+        <div className="section">
 
-                <div className="vertical-line"></div>
+            {/* Partie de gauche */}
+            <div className="left-side">
 
-                <div className="links">
-                    <p>Liens</p>
-                    <p>Liens</p>
-                    <p>Liens</p>
-                    <p>Liens</p>
-                    <p>Liens</p>
-                    <p>Liens</p>
-                </div>
+                <p className="name">Hantaou Karim</p>
+                <p className="title">Développeur Full Stack</p>
+
+                <a download="CV Hantaou Karim.pdf" href="/pdfs/CV.pdf" className="button-cv">
+                    Télécharger mon CV
+                </a>
+
+                <p className="presentation">
+                    Passionné de développement informatique, j’ai appris divers langages de programmation et frameworks.
+                </p>
+
+                <p className="presentation" Style="margin-top: 20px;">
+                    Toujours avide de connaissances, je vois chaque défi comme une opportunité de rester à jour avec les dernières avancées technologiques.
+                </p>
+
             </div>
 
+
+            {/* Partie de droite */}
+            <div className="right-side">
+
+                <p className="sommaire-title">Sommaire</p>
+
+                <div className="right-side-content">
+
+                    <VerticalLine height="100%" color="var(--accent-color)" />
+
+                    <div className="links">
+                        <a>Ma présentation</a>
+                        <a>Mes compétences</a>
+                        <a>Mes projets</a>
+                        <a>Mon parcours</a>
+                        <a>Me contacter</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
+        <div className="section">
+            Section 2
+        </div>
+
+
+
+
+
+
+    {/* FIN */}
     </div>
+
   );
 }
 

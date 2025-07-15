@@ -1,5 +1,5 @@
 :root{
-  --primary-color: #2a2a2c;
+  --primary-color: #151517;
   --secondary-color: #E3E3E3;
   --accent-color: #438256;
 }
@@ -10,22 +10,26 @@
   box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 .main{
   background-color: var(--primary-color);
   color : var(--secondary-color);
-
-
-  height: 100vh;
-  width: 100%;
-
-  display: flex;
 }
 
+.section{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+}
 
 .left-side{
   width: 70%;
   height: 100%;
-  padding-left: 5%;
+  padding-left: 10%;
 
   display: flex;
   flex-direction: column;
@@ -39,12 +43,12 @@
   padding: 20px;
 
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .right-side-content{
-  height: 40%;
-
+  height: 35%;
   display: flex;
 }
 
@@ -60,4 +64,53 @@
   justify-content: space-around;
   gap: 10px;
   margin-left: 10px;
+}
+
+.sommaire-title{
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+}
+
+.links a{
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.links p:hover{
+    color: var(--accent-color);
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.title{
+    font-size: 4.5rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.button-cv{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 15px 40px;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.presentation{
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  width: 90%;
 }
