@@ -1,6 +1,6 @@
-function VerticalLine({ height,color }) {
+function VerticalLine({ height, width,color }) {
     return (
-        <div style={{ borderLeft: `1px solid ${color}`, height: height,}}></div>
+        <div style={{ borderLeft: `${width}px solid ${color}`, height: height,}}></div>
     );
 }
 

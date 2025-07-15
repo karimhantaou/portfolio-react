@@ -3,15 +3,23 @@
   --secondary-color: #E3E3E3;
   --accent-color: #438256;
 }
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
 }
 
 .main{
@@ -81,7 +89,7 @@ a{
     margin-left: 10px;
 }
 
-.links p:hover{
+.links a:hover{
     color: var(--accent-color);
 }
 
@@ -107,6 +115,12 @@ a{
     font-size: 1.8rem;
     cursor: pointer;
     font-weight: bold;
+}
+
+.button-cv:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
 }
 
 .presentation{

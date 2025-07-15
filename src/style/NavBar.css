@@ -1,0 +1,32 @@
+nav {
+    position: fixed;
+    left: 1%;
+    top: 40%;
+    display: flex;
+    flex-direction: row; /* par défaut, mais on précise */
+    align-items: center;
+    gap: 10px;
+
+    width: auto;
+    padding: 10px;
+    height: 20%;
+}
+
+/* assure une largeur visible à la ligne verticale */
+nav .vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+/* assure la colonne des liens */
+.nav-links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-links a{
+    color: var(--secondary-color);
+}
