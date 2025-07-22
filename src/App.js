@@ -1,18 +1,22 @@
 // Import des dépendances
 import { useEffect, useRef, useState } from 'react';
-import {FaGithub, FaLinkedin} from "react-icons/fa";
+import {FaGithub, FaLinkedin, FaRegCopy } from "react-icons/fa";
 import {CiMail} from "react-icons/ci";
+
 
 // Import des styles
 import './style/Main.css';
 import './style/NavBar.css';
+import './style/CopyText.css';
+import './style/EmblaCarousel.css';
 
 
 // Import des composants
 import VerticalLine from "./components/VerticalLine";
 import NavBar from "./components/NavBar";
+import CopyText from "./components/CopyText";
+import {EmblaCarousel} from "./components/EmblaCarousel";
 
-import {FaLetterboxd} from "react-icons/fa6";
 
 function App() {
     const navRef = useRef(null);
@@ -39,6 +43,8 @@ function App() {
             }
         };
     }, []);
+
+
 
     return (
         <div className="main">
@@ -98,15 +104,25 @@ function App() {
             </div>
 
             <div className="section" id="projects">
-                Projets
+                <EmblaCarousel/>
             </div>
 
             <div className="section" id="career">
                 Parcours
             </div>
 
-            <div className="section" id="contact">
-                Contacter
+            <div className="section contact" id="contact">
+                <h1>Me contacter</h1>
+
+                <div className={"mail-container"}>
+                    <CopyText text="karim.hantaou@gmail.com"/>
+                    <p className={"copy-notification"}>Mail copié !</p>
+                </div>
+
+                <div className={"social-links"}>
+                    <a href="https://github.com/karimhantaou/"><FaGithub size={50}/></a>
+                    <a href="https://www.linkedin.com/in/karim-hantaou/"><FaLinkedin size={50}/></a>
+                </div>
             </div>
         </div>
     );

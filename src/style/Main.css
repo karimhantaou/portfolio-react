@@ -171,6 +171,54 @@ a {
     color: var(--accent-color);
 }
 
+
+/* Page ME CONTACTER */
+.contact{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact div{
+    width: 30%;
+    display: flex;
+}
+
+.contact h1{
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10%;
+}
+
+.mail-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.mail-container p{
+    font-size: 2rem;
+}
+
+.copy-notification{
+    font-size: 1.2rem !important;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.social-container{
+    justify-content: space-evenly;
+}
+
+.social-container a{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+
 @media (min-width: 2000px) {
     .section {
         padding: 5%;

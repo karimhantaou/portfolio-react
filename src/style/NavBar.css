@@ -1,15 +1,15 @@
 nav {
     position: fixed;
-    left: 1%;
+    left: 0;
     top: 40%;
     display: flex;
     flex-direction: row; /* par défaut, mais on précise */
     align-items: center;
     gap: 10px;
 
-    width: auto;
-    padding: 10px;
+    width: 7%;
     height: 20%;
+    padding-left: 1%;
 }
 
 /* assure une largeur visible à la ligne verticale */

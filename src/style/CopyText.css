@@ -1,0 +1,9 @@
+.copyText-element{
+    color: var(--secondary-color);
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.copyText-element:hover{
+    color: var(--accent-color);
+}
