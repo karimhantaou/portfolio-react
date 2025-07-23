@@ -171,8 +171,18 @@ a {
     color: var(--accent-color);
 }
 
+/* PAGE PROJETS */
 
-/* Page ME CONTACTER */
+.projects{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Page CONTACT */
 .contact{
     padding: 10%;
     display: flex;
@@ -186,7 +196,7 @@ a {
     display: flex;
 }
 
-.contact h1{
+.contact h1, .projects h1{
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 10%;

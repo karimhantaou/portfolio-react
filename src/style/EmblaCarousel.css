@@ -1,10 +1,79 @@
+.carousel-wrapper {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
 .embla {
     overflow: hidden;
+    width: 100%;
 }
+
 .embla__container {
     display: flex;
 }
+
 .embla__slide {
     flex: 0 0 100%;
     min-width: 0;
+    padding: 10px;
+}
+
+.embla__slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: gray;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+.arrows button {
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.project-info {
+    margin-top: 20px;
+    color: white;
+}
+
+.project-info .carousel-links {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    height: 50px;
+}
+
+.project-info .carousel-links a {
+    color: var(--secondary-color);
 }

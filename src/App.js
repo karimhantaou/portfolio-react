@@ -1,6 +1,6 @@
 // Import des dépendances
 import { useEffect, useRef, useState } from 'react';
-import {FaGithub, FaLinkedin, FaRegCopy } from "react-icons/fa";
+import {FaGithub, FaLinkedin } from "react-icons/fa";
 import {CiMail} from "react-icons/ci";
 
 
@@ -103,7 +103,8 @@ function App() {
                 Compétences
             </div>
 
-            <div className="section" id="projects">
+            <div className="section projects" id="projects">
+                <h1>Mes projets</h1>
                 <EmblaCarousel/>
             </div>
 
