@@ -9,6 +9,7 @@ import './style/Main.css';
 import './style/NavBar.css';
 import './style/CopyText.css';
 import './style/EmblaCarousel.css';
+import './style/Timeline.css';
 
 
 // Import des composants
@@ -16,7 +17,7 @@ import VerticalLine from "./components/VerticalLine";
 import NavBar from "./components/NavBar";
 import CopyText from "./components/CopyText";
 import {EmblaCarousel} from "./components/EmblaCarousel";
-
+import Timeline from './components/Timeline';
 
 function App() {
     const navRef = useRef(null);
@@ -108,8 +109,9 @@ function App() {
                 <EmblaCarousel/>
             </div>
 
-            <div className="section" id="career">
-                Parcours
+            <div className="section career" id="career">
+                <h1>Mon parcours</h1>
+                <Timeline/>
             </div>
 
             <div className="section contact" id="contact">

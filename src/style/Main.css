@@ -173,7 +173,7 @@ a {
 
 /* PAGE PROJETS */
 
-.projects{
+.projects, .career{
     padding: 10%;
     display: flex;
     flex-direction: column;
@@ -196,7 +196,7 @@ a {
     display: flex;
 }
 
-.contact h1, .projects h1{
+.contact h1, .projects h1, .career h1{
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 10%;

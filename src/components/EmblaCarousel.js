@@ -1,24 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {FaGithub, FaGlobe} from "react-icons/fa";
 import useEmblaCarousel from 'embla-carousel-react';
-const projects = [
-    {
-        title: "Movies Manager",
-        description: "Movies Manager est une application Java de gestion de bibliothèque de films, conçue avec Swing pour l'interface utilisateur et MySQL pour la gestion des données. \n Développée sous IntelliJ IDEA, elle permet non seulement d'ajouter, modifier, supprimer ou rechercher des films, mais également de gérer les réservations et locations. L'application offre un suivi en temps réel de la disponibilité des films pour la location, facilitant ainsi l'organisation et l'accès aux informations pour les utilisateurs. ",
-        tech: "React, Node.js, MongoDB",
-        image: "https://hantaoukarim.fr/assets/pictures/moviesmanager.gif",
-        github:"https://github.com/karimhantaou/MoviesManager-Distrib",
-        site: "https://password-manager.example.com"
-    },
-    {
-        title: "Password Manager",
-        description: "Application de gestion de mots de passe développée seul en PHP (MVC) avec Composer, JavaScript et MySQL. Elle permet de gérer comptes et mots de passe de façon sécurisée, avec hashing des mots de passe et chiffrement des données.",
-        tech: "React, CSS, EmailJS",
-        image: "https://hantaoukarim.fr/assets/pictures/PasswordManager2.gif",
-        github:"https://github.com/karimhantaou/MoviesManager-Distrib",
-        site: "https://password-manager.example.com"
-    }
-];
+import projects from '../Data/Projects';
 
 export function EmblaCarousel() {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
@@ -87,6 +70,9 @@ export function EmblaCarousel() {
                     )}
                     {/* Ajout d’un contenu invisible pour forcer le rendu */}
                     {!(projects[selectedIndex].github || projects[selectedIndex].site) && <span style={{ opacity: 0 }}>&nbsp;</span>}
+                </div>
+                <div className={"project-tech"}>
+                    <p>{projects[selectedIndex].tech}</p>
                 </div>
             </div>
         </div>

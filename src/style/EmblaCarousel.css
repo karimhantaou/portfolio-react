@@ -1,13 +1,14 @@
 .embla-carousel-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 
 
 .carousel-wrapper {
     width: 50%;
-    margin: 0 auto;
     text-align: center;
-    position: relative;
 }
 
 .embla {
@@ -71,12 +72,14 @@
     text-align: center;
 }
 
-.projects-description{
-    height: 80%;
+.project-description{
+    height: 70%;
+    padding: 3%;
 }
 
-.projects-description p{
-    margin-bottom: 10px;
+.project-description p{
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 .project-info {
@@ -101,4 +104,22 @@
 
 .project-info .carousel-links a {
     color: var(--secondary-color);
+    transition: color 0.1s ease-in-out;
+}
+
+.project-info .carousel-links a:hover {
+    color: var(--accent-color);
+}
+
+.project-tech{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+}
+
+.project-tech p{
+    width: 100%;
+    text-align: center;
+    font-style: italic;
 }
