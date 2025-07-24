@@ -3,66 +3,20 @@ import {FaGithub, FaGlobe} from "react-icons/fa";
 import useEmblaCarousel from 'embla-carousel-react';
 const projects = [
     {
-        title: "Password Manager",
-        description: "Application sécurisée pour stocker ses mots de passe.",
+        title: "Movies Manager",
+        description: "Movies Manager est une application Java de gestion de bibliothèque de films, conçue avec Swing pour l'interface utilisateur et MySQL pour la gestion des données. \n Développée sous IntelliJ IDEA, elle permet non seulement d'ajouter, modifier, supprimer ou rechercher des films, mais également de gérer les réservations et locations. L'application offre un suivi en temps réel de la disponibilité des films pour la location, facilitant ainsi l'organisation et l'accès aux informations pour les utilisateurs. ",
         tech: "React, Node.js, MongoDB",
-        image: "https://placehold.co/1920x1080",
-        github:"liens vers le github du projet",
+        image: "https://hantaoukarim.fr/assets/pictures/moviesmanager.gif",
+        github:"https://github.com/karimhantaou/MoviesManager-Distrib",
         site: "https://password-manager.example.com"
     },
     {
-        title: "Portfolio Web",
-        description: "Site personnel pour présenter mes projets.",
+        title: "Password Manager",
+        description: "Application de gestion de mots de passe développée seul en PHP (MVC) avec Composer, JavaScript et MySQL. Elle permet de gérer comptes et mots de passe de façon sécurisée, avec hashing des mots de passe et chiffrement des données.",
         tech: "React, CSS, EmailJS",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Jeu 2D",
-        description: "Un petit jeu développé en canvas HTML5.",
-        tech: "JavaScript, HTML5",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "To-Do App",
-        description: "Gestionnaire de tâches simple et efficace.",
-        tech: "React, Firebase",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Blog Personnel",
-        description: "Blog pour partager mes idées et tutoriels.",
-        tech: "Next.js, Markdown",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Clone de Netflix",
-        description: "Application de streaming fictive.",
-        tech: "React, TMDB API",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Application météo",
-        description: "Affiche les données météo en temps réel.",
-        tech: "React, OpenWeatherMap API",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Gestionnaire de dépenses",
-        description: "Suivi de budget personnel.",
-        tech: "Vue.js, Chart.js",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Application de recettes",
-        description: "Recherche et sauvegarde de recettes.",
-        tech: "React, Spoonacular API",
-        image: "https://placehold.co/1920x1080"
-    },
-    {
-        title: "Dashboard Admin",
-        description: "Tableau de bord d'administration complet.",
-        tech: "React, Recharts, Tailwind",
-        image: "https://placehold.co/1920x1080"
+        image: "https://hantaoukarim.fr/assets/pictures/PasswordManager2.gif",
+        github:"https://github.com/karimhantaou/MoviesManager-Distrib",
+        site: "https://password-manager.example.com"
     }
 ];
 
@@ -83,37 +37,43 @@ export function EmblaCarousel() {
     }, [emblaApi])
 
     return (
-        <div className="carousel-wrapper">
-            <div className="embla" ref={emblaRef}>
-                <div className="embla__container">
-                    {projects.map((project, index) => (
-                        <div className="embla__slide" key={index}>
-                            <img src={project.image} alt={project.title} />
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            <div className="carousel-footer">
-                <div className="dots">
-                    {projects.map((_, index) => (
-                        <button
-                            key={index}
-                            className={`dot ${index === selectedIndex ? 'active' : ''}`}
-                            onClick={() => scrollTo(index)}
-                        />
-                    ))}
+        <div className={"embla-carousel-container"}>
+            <div className="carousel-wrapper">
+                <div className="embla" ref={emblaRef}>
+                    <div className="embla__container">
+                        {projects.map((project, index) => (
+                            <div className="embla__slide" key={index}>
+                                <img src={project.image} alt={project.title} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                <div className="arrows">
-                    <button onClick={scrollPrev}>◀</button>
-                    <button onClick={scrollNext}>▶</button>
+                <div className="carousel-footer">
+                    <div className="dots">
+                        {projects.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`dot ${index === selectedIndex ? 'active' : ''}`}
+                                onClick={() => scrollTo(index)}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="arrows">
+                        <button onClick={scrollPrev}>◀</button>
+                        <button onClick={scrollNext}>▶</button>
+                    </div>
                 </div>
             </div>
 
             <div className="project-info">
-                <h3>{projects[selectedIndex].title}</h3>
-                <p>{projects[selectedIndex].description}</p>
+                <h3 className={"projects-title"}>{projects[selectedIndex].title}</h3>
+                <div className="project-description">
+                    {projects[selectedIndex].description.split('\n').map((line, index) => (
+                        <p key={index}>{line}</p>
+                    ))}
+                </div>
                 <div className="carousel-links">
                     {projects[selectedIndex].github && (
                         <a href={projects[selectedIndex].github} target="_blank" rel="noreferrer" className="icon-link">
