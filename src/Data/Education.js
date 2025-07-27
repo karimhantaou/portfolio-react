@@ -1,27 +1,61 @@
-// Schools.js
-const schools = [
+const education = [
     {
-        id: 1,
-        schoolName: "Lycée Jean Moulin",
-        degree: "Baccalauréat Scientifique",
-        startYear: 2012,
-        endYear: 2015,
+        type: "education",
+        title: "Baccalauréat Scientifique",
+        place:"Lycée Jean Mermoz, Montpellier",
+        year: "2019",
+        description: "",
+        position: "0"
     },
     {
-        id: 2,
-        schoolName: "Université Paris-Sorbonne",
-        degree: "Licence de Lettres Modernes",
-        startYear: 2015,
-        endYear: 2018,
+        type: "education",
+        title: "Licence Informatique",
+        place:"Faculté des Sciences et des Lettres de Montpellier",
+        year: "2019-2021",
+        description: "",
+        position: "20"
     },
     {
-        id: 3,
-        schoolName: "Université Paris-Dauphine",
-        degree: "Master en Marketing",
-        startYear: 2018,
-        endYear: 2020,
+        type: "education",
+        title: "BTS SIO",
+        place:"Esicad, Montpellier",
+        year: "2023",
+        description: "",
+        position: "50"
     },
-    // Ajoute autant que tu veux
+    {
+        type: "work",
+        title: "Préparateur de commandes",
+        place:"Leclerc Drive, Lattes",
+        year: "2021-2023",
+        description: "",
+        position: "30"
+    },
+    {
+        type: "education",
+        title: "Master Informatique",
+        place:"Epitech, Montpellier",
+        year: "2025-2028",
+        description: "",
+        position: "80"
+    },
+    {
+        type: "work",
+        title: "Stage Développeur Web",
+        place:"Lasloc",
+        year: "Mars 2024 - Juin 2024",
+        description: "",
+        position: "50"
+    },
+    {
+        type: "work",
+        title: "Alternance Développeur Web",
+        place:"Lasloc",
+        year: "Septembre 2024 - Août 2025",
+        description: "",
+        position: "68"
+    }
+
 ];
 
-export default schools;
+export default education;

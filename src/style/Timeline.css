@@ -1,56 +1,11 @@
-/* Timeline.css */
-.timeline-container {
-    padding: 20px;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.timeline {
-    display: inline-flex;
-    align-items: center;
+.timeline{
     position: relative;
-    padding: 20px 0;
+    width: 80%;
+    margin-bottom: 250px;
+    margin-top: 100px;
 }
 
-.timeline-item {
-    display: inline-block;
-    position: relative;
-    margin: 0 30px;
-    text-align: center;
-    min-width: 180px;
-}
-
-.timeline-point {
-    width: 14px;
-    height: 14px;
-    background-color: #4a90e2;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-    position: relative;
-    top: 0;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
-}
-
-.timeline-content {
-    background: #f0f4f8;
-    border-radius: 8px;
-    padding: 10px 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-content h3 {
-    margin: 0 0 6px 0;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.timeline-content p {
-    margin: 0 0 8px 0;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.timeline-date {
-    font-size: 0.85rem;
-    color: #999;
+.circle:hover{
+    border: 3px solid var(--accent-color);
+    cursor: pointer;
 }

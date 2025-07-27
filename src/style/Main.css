@@ -1,8 +1,8 @@
 /* 🌐 VARIABLES GLOBALES */
 :root {
-    --primary-color: #151517;
-    --secondary-color: #E3E3E3;
-    --accent-color: #438256;
+    --primary-color: #171717;
+    --secondary-color: #EEEEEE;
+    --accent-color: #7c2f98;
 }
 
 /* 🔧 RESET DE BASE */
@@ -228,6 +228,18 @@ a {
     font-size: 1.5rem;
 }
 
+.career-info{
+    min-height: 20%;
+    max-height: 30%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.career-info p{
+    margin-bottom: 20px;
+}
 
 @media (min-width: 2000px) {
     .section {

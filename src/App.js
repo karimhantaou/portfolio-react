@@ -17,7 +17,7 @@ import VerticalLine from "./components/VerticalLine";
 import NavBar from "./components/NavBar";
 import CopyText from "./components/CopyText";
 import {EmblaCarousel} from "./components/EmblaCarousel";
-import Timeline from './components/Timeline';
+import {Timeline} from './components/Timeline';
 
 function App() {
     const navRef = useRef(null);
@@ -45,7 +45,12 @@ function App() {
         };
     }, []);
 
+    // État pour gérer le texte affiché lors du clic sur un pin
+    const [careerInfo, setCareerInfo] = useState(null);
 
+    const handlePinClick = (title, description, place, year) => {
+        setCareerInfo({ title, description, place, year });
+    };
 
     return (
         <div className="main">
@@ -110,8 +115,21 @@ function App() {
             </div>
 
             <div className="section career" id="career">
-                <h1>Mon parcours</h1>
-                <Timeline/>
+                <div Style={"margin-bottom: 150px; text-align: center"}>
+                    <h1>Mon parcours</h1>
+                    <p>Cliquez sur l'un des pins pour en savoir plus</p>
+                </div>
+
+                <Timeline onPinClick={handlePinClick}/>
+                <div className="career-info">
+                    {careerInfo && (
+                            <div>
+                                <h2>{careerInfo.title}</h2>
+                                <p>{careerInfo.place}, {careerInfo.year}</p>
+                                <p>{careerInfo.description}</p>
+                            </div>
+                    )}
+                </div>
             </div>
 
             <div className="section contact" id="contact">

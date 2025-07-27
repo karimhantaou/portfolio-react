@@ -1,26 +1,28 @@
-// Timeline.js
-import React from "react";
-import schools from "../Data/Education";
+import React from 'react';
+import HorizontalLine from "./HorizontalLine";
+import Pin from "./Pin";
+import education from "../Data/Education";
 
-const Timeline = () => {
-    return (
-        <div className="timeline-container">
-            <div className="timeline">
-                {schools.map(({ id, schoolName, degree, startYear, endYear }) => (
-                    <div key={id} className="timeline-item">
-                        <div className="timeline-content">
-                            <h3>{schoolName}</h3>
-                            <p>{degree}</p>
-                            <span className="timeline-date">
-                {startYear} - {endYear}
-              </span>
-                        </div>
-                        <div className="timeline-point" />
-                    </div>
-                ))}
-            </div>
+export function Timeline({onPinClick}){
+
+    return(
+        <div className={"timeline"}>
+
+            {education.map((item, index) => (
+                <Pin
+                    key={index}
+                    position={`${item.position}%`}
+                    color={"var(--secondary-color)"}
+                    type={item.type}
+                    title={item.title}
+                    description={item.description}
+                    place={item.place}
+                    year={item.year}
+
+                    onClick={onPinClick}
+                />
+            ))}
+            <div Style={"width:100%; border-bottom:4px solid var(--secondary-color); position: relative; top:50%"}></div>
         </div>
-    );
-};
-
-export default Timeline;
+    )
+}
