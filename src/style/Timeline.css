@@ -5,7 +5,17 @@
     margin-top: 100px;
 }
 
+.circle{
+    transition: all ease-in-out 0.2s;
+}
+
 .circle:hover{
     border: 3px solid var(--accent-color);
     cursor: pointer;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.circle:hover ~ .pin-title, .circle:hover + .pin-title{
+    color: var(--accent-color) !important;
 }

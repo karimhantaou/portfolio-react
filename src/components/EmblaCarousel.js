@@ -25,8 +25,8 @@ export function EmblaCarousel() {
                 <div className="embla" ref={emblaRef}>
                     <div className="embla__container">
                         {projects.map((project, index) => (
-                            <div className="embla__slide" key={index}>
-                                <img src={project.image} alt={project.title} />
+                            <div className="embla__slide" key={index} >
+                                <img src={project.image} alt={project.title}/>
                             </div>
                         ))}
                     </div>
@@ -37,15 +37,15 @@ export function EmblaCarousel() {
                         {projects.map((_, index) => (
                             <button
                                 key={index}
-                                className={`dot ${index === selectedIndex ? 'active' : ''}`}
+                                className={`dot ${index === selectedIndex ? 'active' : ''} zp-anim`}
                                 onClick={() => scrollTo(index)}
-                            />
+                             />
                         ))}
                     </div>
 
                     <div className="arrows">
-                        <button onClick={scrollPrev}>◀</button>
-                        <button onClick={scrollNext}>▶</button>
+                        <button onClick={scrollPrev} className={"zp-anim"}>◀</button>
+                        <button onClick={scrollNext} className={"zp-anim"}>▶</button>
                     </div>
                 </div>
             </div>
@@ -57,22 +57,22 @@ export function EmblaCarousel() {
                         <p key={index}>{line}</p>
                     ))}
                 </div>
+                <div className={"project-tech"}>
+                    <p>{projects[selectedIndex].tech}</p>
+                </div>
                 <div className="carousel-links">
                     {projects[selectedIndex].github && (
-                        <a href={projects[selectedIndex].github} target="_blank" rel="noreferrer" className="icon-link">
+                        <a href={projects[selectedIndex].github} target="_blank" rel="noreferrer" className="icon-link zp-anim">
                             <FaGithub size={35}/>
                         </a>
                     )}
                     {projects[selectedIndex].site && (
-                        <a href={projects[selectedIndex].site} target="_blank" rel="noreferrer" className="icon-link">
+                        <a href={projects[selectedIndex].site} target="_blank" rel="noreferrer" className="icon-link zp-anim">
                             <FaGlobe size={35}/>
                         </a>
                     )}
                     {/* Ajout d’un contenu invisible pour forcer le rendu */}
                     {!(projects[selectedIndex].github || projects[selectedIndex].site) && <span style={{ opacity: 0 }}>&nbsp;</span>}
-                </div>
-                <div className={"project-tech"}>
-                    <p>{projects[selectedIndex].tech}</p>
                 </div>
             </div>
         </div>

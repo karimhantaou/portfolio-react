@@ -4,7 +4,7 @@ const education = [
         title: "Baccalauréat Scientifique",
         place:"Lycée Jean Mermoz, Montpellier",
         year: "2019",
-        description: "",
+        description: "djoiqzjdpoqizjd)oqzjdpoqjzpod",
         position: "0"
     },
     {

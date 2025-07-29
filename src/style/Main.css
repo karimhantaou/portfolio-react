@@ -1,9 +1,3 @@
-/* 🌐 VARIABLES GLOBALES */
-:root {
-    --primary-color: #171717;
-    --secondary-color: #EEEEEE;
-    --accent-color: #7c2f98;
-}
 
 /* 🔧 RESET DE BASE */
 * {
@@ -12,11 +6,16 @@
     box-sizing: border-box;
 }
 
+.main, a, p ,h1, h2, h3, h4, h5, h6, button {
+    transition: all ease-in-out 0.2s;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
@@ -24,6 +23,18 @@ a {
 .main {
     color: var(--secondary-color);
     background-color: var(--primary-color);
+    transition: all ease-in-out 0.2s;
+}
+
+.main-theme-button{
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.main-theme-button:hover {
+    color: var(--accent-color);
 }
 
 /* 📄 SECTIONS GÉNÉRIQUES */
@@ -46,11 +57,18 @@ a {
 }
 
 .pfp{
-    width: 10%;
+    width: 10em;
 
     position: absolute;
-    top: 15%;
-    left: 55%;
+    right: -12em;
+    top: -6em;
+
+    border-radius: 50%;
+
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    border: 2px solid var(--secondary-color);
 }
 
 /* 👤 NOM */
@@ -58,14 +76,16 @@ a {
     font-size: 3rem;
     font-weight: 600;
     color: var(--secondary-color);
+
 }
 
 /* 🧑‍💻 TITRE / MÉTIER */
 .title {
-    font-size: 4.5rem;
+    font-size: 7rem;
     font-weight: bold;
 
     color: var(--secondary-color);
+    font-family: "Bebas Neue", sans-serif;
 }
 
 /* 📄 BOUTON DE TÉLÉCHARGEMENT DU CV */
@@ -80,14 +100,18 @@ a {
     cursor: pointer;
     text-align: center;
 
-    color: var(--secondary-color);
+    color: white;
     background-color: var(--accent-color);
+
+    box-shadow: 0 0 10px var(--accent-color);
+    transition: all 0.1s ease-in-out;
 }
 
 .button-cv:hover {
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    transition: all 0.3s ease-in-out;
+    transform : scale(1.1);
+    box-shadow: 0 0 10px var(--secondary-color);
 }
 
 /* RÉSEAUX SOCIAUX PRESENTATION */
@@ -96,7 +120,8 @@ a {
     margin-bottom: 30px;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5%;
 }
 
 .social-links a{
@@ -105,7 +130,7 @@ a {
 
 .social-links a:hover {
     color: var(--accent-color);
-    transition: color 0.3s ease-in-out;
+    -webkit-filter: drop-shadow( 0px 0px 2px var(--accent-color));
 }
 
 
@@ -137,7 +162,7 @@ a {
 
 /* 📦 CONTENU INTERNE (vertical-line + liens) */
 .right-side-content {
-    height: 22%;
+    height: 28%;
     display: flex;
 }
 
@@ -169,6 +194,7 @@ a {
 
 .links a:hover {
     color: var(--accent-color);
+    -webkit-filter: drop-shadow( 0px 0px 2px var(--accent-color));
 }
 
 /* PAGE PROJETS */
@@ -189,6 +215,8 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    gap: 5%;
 }
 
 .contact div{
@@ -196,17 +224,25 @@ a {
     display: flex;
 }
 
+.contact, .projects, .career{
+    position: relative;
+
+}
+
 .contact h1, .projects h1, .career h1{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    text-align: center;
     font-size: 2.5rem;
     color: var(--secondary-color);
-    margin-bottom: 10%;
 }
 
 .mail-container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10%;
 }
 
 .mail-container p{
@@ -217,6 +253,7 @@ a {
     font-size: 1.2rem !important;
     margin-top: 10px;
     visibility: hidden;
+    color: var(--accent-color);
 }
 
 .social-container{
@@ -239,6 +276,34 @@ a {
 
 .career-info p{
     margin-bottom: 20px;
+}
+
+.zp-anim{
+    transition: transform 0.2s;
+    width: fit-content;
+
+}
+
+.zp-anim:hover{
+    transform : scale(1.5);
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+}
+
+.popup-button{
+    margin-top: 50px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    -webkit-filter: drop-shadow(0px 0px 5px var(--accent-color));
+}
+
+.popup-button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    -webkit-filter: drop-shadow(0px 0px 5px var(--secondary-color));
 }
 
 @media (min-width: 2000px) {

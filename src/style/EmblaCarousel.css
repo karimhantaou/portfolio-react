@@ -28,8 +28,10 @@
 
 .embla__slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    object-fit: cover;
 }
 
 .carousel-footer {
@@ -49,21 +51,25 @@
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: gray;
+    background: var(--secondary-color);
     cursor: pointer;
 }
 
 .dot.active {
-    background: white;
+    background: var(--accent-color);
 }
 
 .arrows button {
     background: transparent;
-    color: white;
+    color: var(--secondary-color);;
     font-size: 20px;
     border: none;
     cursor: pointer;
     margin: 0 5px;
+}
+
+.arrows button:hover {
+    color: var(--accent-color);
 }
 
 .projects-title{
@@ -104,7 +110,6 @@
 
 .project-info .carousel-links a {
     color: var(--secondary-color);
-    transition: color 0.1s ease-in-out;
 }
 
 .project-info .carousel-links a:hover {
@@ -116,10 +121,12 @@
     width: 100%;
     position: absolute;
     bottom: 10%;
+    font-weight: bold;
 }
 
 .project-tech p{
     width: 100%;
     text-align: center;
     font-style: italic;
+    color: var(--accent-color);
 }

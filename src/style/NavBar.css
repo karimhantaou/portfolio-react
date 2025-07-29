@@ -1,15 +1,17 @@
 nav {
     position: fixed;
     left: 0;
-    top: 40%;
+    top: 38%;
     display: flex;
     flex-direction: row; /* par défaut, mais on précise */
     align-items: center;
     gap: 10px;
 
     width: 7%;
-    height: 20%;
+    height: 200px;
     padding-left: 1%;
+
+    z-index: 99;
 }
 
 /* assure une largeur visible à la ligne verticale */
@@ -29,4 +31,18 @@ nav .vertical-line {
 
 .nav-links a{
     color: var(--secondary-color);
+}
+
+.nav-links a:hover{
+    color: var(--accent-color);
+    -webkit-filter: drop-shadow(0px 0px 2px var(--accent-color));
+}
+
+.nav-links button{
+    width: fit-content;
+}
+
+.nav-links button:hover{
+    color: var(--accent-color);
+    -webkit-filter: drop-shadow(0px 0px 2px var(--accent-color));
 }

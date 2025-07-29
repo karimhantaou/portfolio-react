@@ -20,9 +20,10 @@ export function Timeline({onPinClick}){
                     year={item.year}
 
                     onClick={onPinClick}
+
                 />
             ))}
-            <div Style={"width:100%; border-bottom:4px solid var(--secondary-color); position: relative; top:50%"}></div>
+            <div Style={"width:100%; border-bottom:5px solid var(--secondary-color); position: relative; top:50%; border-radius: 50px"}></div>
         </div>
     )
 }
