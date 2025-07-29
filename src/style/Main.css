@@ -1,311 +1,287 @@
-
-/* 🔧 RESET DE BASE */
+/* ==================== RESET ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main, a, p ,h1, h2, h3, h4, h5, h6, button {
-    transition: all ease-in-out 0.2s;
-}
-
-
 html {
     scroll-behavior: smooth;
 }
 
-a{
+html, body{
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+a {
     text-decoration: none;
 }
 
-/* 🖼️ CONTENEUR PRINCIPAL */
+.main, a, p, h1, h2, h3, h4, h5, h6, button {
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* ==================== THEME ==================== */
 .main {
     color: var(--secondary-color);
     background-color: var(--primary-color);
-    transition: all ease-in-out 0.2s;
 }
 
-.main-theme-button{
-    background-color: transparent;
+.main-theme-button {
+    background: transparent;
     border: none;
     color: var(--secondary-color);
-    transition: color 0.3s ease-in-out;
 }
 
 .main-theme-button:hover {
     color: var(--accent-color);
 }
 
-/* 📄 SECTIONS GÉNÉRIQUES */
+
+/* ==================== SECTIONS ==================== */
 .section {
     height: 100vh;
     width: 100%;
     display: flex;
+    scroll-snap-align: start;
 }
 
-/* ⬅️⬅️⬅️ PARTIE GAUCHE : .left-side */
-.left-side {
-    width: 80%;
-    height: 100%;
-    padding-left: 10%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.pfp{
-    width: 10em;
-
-    position: absolute;
-    right: -12em;
-    top: -6em;
-
-    border-radius: 50%;
-
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-
-    border: 2px solid var(--secondary-color);
-}
-
-/* 👤 NOM */
-.name {
-    font-size: 3rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-
-}
-
-/* 🧑‍💻 TITRE / MÉTIER */
-.title {
-    font-size: 7rem;
-    font-weight: bold;
-
-    color: var(--secondary-color);
-    font-family: "Bebas Neue", sans-serif;
-}
-
-/* 📄 BOUTON DE TÉLÉCHARGEMENT DU CV */
-.button-cv {
-    width: 30%;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    padding: 15px 40px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-
-    color: white;
-    background-color: var(--accent-color);
-
-    box-shadow: 0 0 10px var(--accent-color);
-    transition: all 0.1s ease-in-out;
-}
-
-.button-cv:hover {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    transform : scale(1.1);
-    box-shadow: 0 0 10px var(--secondary-color);
-}
-
-/* RÉSEAUX SOCIAUX PRESENTATION */
-.social-links{
-    width: 30%;
-    margin-bottom: 30px;
-
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-}
-
-.social-links a{
-    color: var(--secondary-color);
-}
-
-.social-links a:hover {
-    color: var(--accent-color);
-    -webkit-filter: drop-shadow( 0px 0px 2px var(--accent-color));
-}
-
-
-/* 📝 TEXTES DE PRÉSENTATION */
-.presentation {
-    width: 90%;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--secondary-color);
-}
-
-/* ➡️➡️➡️ PARTIE DROITE : .right-side */
-.right-side {
-    width: 30%;
-    height: 100%;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* 🏷️ TITRE "SOMMAIRE" */
-.sommaire-title {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: var(--secondary-color);
-}
-
-/* 📦 CONTENU INTERNE (vertical-line + liens) */
-.right-side-content {
-    height: 28%;
-    display: flex;
-}
-
-/* 📏 LIGNE VERTICALE */
-.vertical-line {
-    height: 100%;
-    width: 1px;
-    background-color: var(--accent-color);
-}
-
-/* 🔗 LISTE DES LIENS */
-.links {
-    gap: 10px;
-    margin-left: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-/* 🔗 LIENS INDIVIDUELS */
-.links a {
-    font-size: 1.2rem;
-    margin-left: 10px;
-    cursor: pointer;
-    color: var(--secondary-color);
-    transition: color 0.3s ease-in-out;
-}
-
-.links a:hover {
-    color: var(--accent-color);
-    -webkit-filter: drop-shadow( 0px 0px 2px var(--accent-color));
-}
-
-/* PAGE PROJETS */
-
-.projects, .career{
+.projects,
+.career,
+.contact {
     padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* Page CONTACT */
-.contact{
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 5%;
-}
-
-.contact div{
-    width: 30%;
-    display: flex;
-}
-
-.contact, .projects, .career{
     position: relative;
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
-.contact h1, .projects h1, .career h1{
+.projects h1,
+.career h1,
+.contact h1 {
     position: absolute;
     top: 5%;
-    left: 0;
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
     color: var(--secondary-color);
 }
 
-.mail-container{
+
+/* ==================== PRÉSENTATION - GAUCHE ==================== */
+.left-side {
+    width: 80%;
+    height: 100%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 7rem;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.pfp {
+    width: 10em;
+    position: absolute;
+    right: -12em;
+    top: -6em;
+    border-radius: 50%;
+    transform: scaleX(-1);
+    border: 2px solid var(--secondary-color);
+}
+
+.button-cv {
+    width: 30%;
+    margin: 60px 0 30px;
+    padding: 15px 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.button-cv:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.presentation {
+    width: 90%;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+/* ==================== PRÉSENTATION - DROITE ==================== */
+.right-side {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sommaire-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.right-side-content {
+    height: 28%;
+    display: flex;
+}
+
+.vertical-line {
+    height: 100%;
+    width: 1px;
+    background-color: var(--accent-color);
+}
+
+.links {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.links a {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.links a:hover {
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 2px var(--accent-color));
+}
+
+
+/* ==================== RÉSEAUX SOCIAUX ==================== */
+.social-links {
+    width: 30%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 2px var(--accent-color));
+}
+
+
+/* ==================== CONTACT ==================== */
+.contact div {
+    width: 30%;
+    display: flex;
+}
+
+.mail-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.mail-container p{
+.mail-container p {
     font-size: 2rem;
 }
 
-.copy-notification{
+.copy-notification {
     font-size: 1.2rem !important;
     margin-top: 10px;
     visibility: hidden;
     color: var(--accent-color);
 }
 
-.social-container{
+.social-container {
     justify-content: space-evenly;
 }
 
-.social-container a{
+.social-container a {
     color: var(--secondary-color);
     font-size: 1.5rem;
 }
 
-.career-info{
-    min-height: 20%;
-    max-height: 30%;
-    width: 80%;
+
+/* ==================== PARCOURS ==================== */
+.career-info {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.career-info p{
+.career-info h2 {
+    text-align: center;
+}
+
+.career-info p {
     margin-bottom: 20px;
 }
 
-.zp-anim{
+
+/* ==================== COMPORTEMENTS GÉNÉRAUX ==================== */
+.zp-anim {
     transition: transform 0.2s;
     width: fit-content;
-
 }
 
-.zp-anim:hover{
-    transform : scale(1.5);
+.zp-anim:hover {
+    transform: scale(1.5);
     transition: all 0.2s ease-in-out;
-    width: fit-content;
 }
 
-.popup-button{
+
+/* ==================== BOUTON POPUP ==================== */
+.popup-button {
     margin-top: 50px;
     background-color: var(--accent-color);
     color: var(--primary-color);
     border: none;
     padding: 10px 20px;
     font-size: 1.2rem;
-    -webkit-filter: drop-shadow(0px 0px 5px var(--accent-color));
+    filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
-.popup-button:hover{
+.popup-button:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    -webkit-filter: drop-shadow(0px 0px 5px var(--secondary-color));
+    filter: drop-shadow(0 0 5px var(--secondary-color));
 }
 
+
+/* ==================== RESPONSIVE ==================== */
 @media (min-width: 2000px) {
     .section {
         padding: 5%;

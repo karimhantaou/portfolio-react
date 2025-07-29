@@ -4,7 +4,9 @@ const education = [
         title: "Baccalauréat Scientifique",
         place:"Lycée Jean Mermoz, Montpellier",
         year: "2019",
-        description: "djoiqzjdpoqizjd)oqzjdpoqjzpod",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\n" +
+            "\n" +
+            "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
         position: "0"
     },
     {
@@ -33,7 +35,7 @@ const education = [
     },
     {
         type: "education",
-        title: "Master Informatique",
+        title: "Master Of Science Epitech",
         place:"Epitech, Montpellier",
         year: "2025-2028",
         description: "",
@@ -41,7 +43,7 @@ const education = [
     },
     {
         type: "work",
-        title: "Stage Développeur Web",
+        title: "Stage Développeur Web Full Stack",
         place:"Lasloc",
         year: "Mars 2024 - Juin 2024",
         description: "",
@@ -49,7 +51,7 @@ const education = [
     },
     {
         type: "work",
-        title: "Alternance Développeur Web",
+        title: "Alternance Développeur Web Full Stack",
         place:"Lasloc",
         year: "Septembre 2024 - Août 2025",
         description: "",

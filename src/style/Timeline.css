@@ -1,8 +1,7 @@
-.timeline{
+.timeline {
     position: relative;
     width: 80%;
-    margin-bottom: 250px;
-    margin-top: 100px;
+    height: 75%;
 }
 
 .circle{
