@@ -2,9 +2,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // Icônes
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLinux, FaServer, FaDatabase, FaNetworkWired, FaGlobe, FaDesktop, FaCode, FaCogs, FaCog, FaLaptopCode } from "react-icons/fa";
+import { FaDebian, FaBrain } from "react-icons/fa6";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
+import { IoDesktop, IoLibrarySharp } from "react-icons/io5";
+import { SiIonos, SiOvh, SiJavascript, SiPhp, SiReact, SiNextdotjs, SiSymfony, SiElectron, SiCplusplus, SiPython } from "react-icons/si";
+import { HiMiniGlobeAlt } from "react-icons/hi2";
+
 
 // Styles
 import './style/Main.css';
@@ -21,6 +26,7 @@ import { EmblaCarousel } from "./components/EmblaCarousel";
 import { Timeline } from './components/Timeline';
 import ResolutionWarning from "./components/ResolutionWarning";
 import education from "./Data/Education";
+import Marquee from "react-fast-marquee";
 
 
 // Fonction principale de l'application
@@ -42,7 +48,7 @@ function App() {
             root.style.setProperty('--secondary-color', '#111111');
         }
 
-        root.style.setProperty('--accent-color', '#fa6c00');
+        root.style.setProperty('--accent-color', '#ff0d39');
         localStorage.setItem('theme', theme);
         setThemeState(theme);
     };
@@ -177,9 +183,206 @@ function App() {
             </div>
 
             {/* Compétences */}
-            <div className="section" id="skills">
+            <div className="section skills" id="skills">
                 <h1>Compétences</h1>
+
+                <div className={"skills-summary-container"}>
+                    <div className={"development-skills-container"}>
+                        <h2>Développement informatique</h2>
+                        <ul>
+                            <li>WEB : PHP, Javascript, React js, Next js</li>
+                            <li>Logiciel : Java, C#, C++, Python</li>
+                            <li>Base de données : SQL, MySQL</li>
+                        </ul>
+                        <a href={"#dev"}>En savoir plus</a>
+                    </div>
+                    <div className={"networking-skills-container"}>
+                        <h2>Systèmes et réseaux</h2>
+                        <ul>
+                            <li>Administration Linux et Windows Server</li>
+                            <li>Virtualisation et conteneurs (Docker)</li>
+                            <li>Outils de versioning (Git, GitHub)</li>
+                        </ul>
+                        <a href={"#network"}>En savoir plus</a>
+                    </div>
+                    <div className={"graphics-skills-container"}>
+                        <h2>Création visuel</h2>
+                        <ul>
+                            <li>Montage photo</li>
+                            <li>Montage vidéo</li>
+                        </ul>
+                        <a href={"#graphic"}>En savoir plus</a>
+                    </div>
+                </div>
             </div>
+
+            {/* DEV */}
+            <div className="section dev" id="dev">
+                <h1>Développement informatique</h1>
+
+                <p className={"dev-text"}>J’ai évolué dans différents univers du développement, principalement orienté web.</p>
+                <p className={"dev-text"}>De la conception d’interfaces à la gestion de bases de données, j’aime toucher à tout, avec une préférence marquée pour le backend, et découvrir de nouvelles technologies au fil des projets.</p>
+
+                <div className="dev-row">
+
+                    <div className={"dev-element"}>
+                        <div className={"dev-element-header"}>
+                            <HiMiniGlobeAlt size={30} className="icon" />
+                            <p className={"dev-element-title"}>Langages Web</p>
+                        </div>
+                            <div className="dev-element-content">
+                                <p className={"dev-element-element"}>Javascript</p>
+                                <p className={"dev-element-element"}>PHP</p>
+                                <p className={"dev-element-element"}>HTML/CSS</p>
+                        </div>
+                    </div>
+
+                    <div className={"dev-element"}>
+                        <div className={"dev-element-header"}>
+                            <FaBrain size={30} className="icon" />
+                            <p className={"dev-element-title"}>Langages pour logiciels</p>
+                        </div>
+                        <div className="dev-element-content">
+                            <p className={"dev-element-element"}>Java</p>
+                            <p className={"dev-element-element"}>C#</p>
+                            <p className={"dev-element-element"}>C++</p>
+                            <p className={"dev-element-element"}>Python</p>
+                        </div>
+                    </div>
+
+
+                    <div className={"dev-element"}>
+                        <div className={"dev-element-header"}>
+                            <IoLibrarySharp size={30} className="icon" />
+                            <p className={"dev-element-title"}>Frameworks & bibliothèques</p>
+                        </div>
+                        <div className="dev-element-content">
+                            <p className={"dev-element-element"}>React js</p>
+                            <p className={"dev-element-element"}>Next js</p>
+                            <p className={"dev-element-element"}>Symfony</p>
+                            <p className={"dev-element-element"}>Electron</p>
+                        </div>
+                    </div>
+
+                    <div className={"dev-element"}>
+                        <div className={"dev-element-header"}>
+                            <FaDatabase size={30} className="icon" />
+                            <p className={"dev-element-title"}>Bases de données</p>
+                        </div>
+                        <div className="dev-element-content">
+                            <p className={"dev-element-element"}>SQL</p>
+                            <p className={"dev-element-element"}>MySQL</p>
+                            <p className={"dev-element-element"}>MongoDB</p>
+                            <p className={"dev-element-element"}>PostgreSQL</p>
+                        </div>
+                    </div>
+
+                    <div className={"dev-element"}>
+                        <div className={"dev-element-header"}>
+                            <FaCog size={30} className="icon" />
+                            <p className={"dev-element-title"}>Outils et technologies</p>
+                        </div>
+                        <div className="dev-element-content">
+                            <p className={"dev-element-element"}>Git</p>
+                            <p className={"dev-element-element"}>GitHub</p>
+                            <p className={"dev-element-element"}>Agile/Scrum</p>
+                        </div>
+                    </div>
+
+                    <div className={"dev-element"}>
+                        <div className={"dev-element-header"}>
+                            <IoDesktop size={30} className="icon" />
+                            <p className={"dev-element-title"}>Environnements de travail</p>
+                        </div>
+                        <div className="dev-element-content">
+                            <p className={"dev-element-element"}>.Net</p>
+                            <p className={"dev-element-element"}>JetBrains</p>
+                            <p className={"dev-element-element"}>Visual Studio / Code</p>
+                            <p className={"dev-element-element"}>XAMPP / WAMP / MAMP </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div className="section network" id="network">
+                <h1>Systèmes et réseaux</h1>
+
+                <div className="network-content">
+                    <div className="network-item">
+                        <FaServer size={30} className="icon" />
+                        <div>
+                            <h3>Administration Linux</h3>
+                            <p>Maîtrise de Debian et Ubuntu, configuration de serveurs avec Apache, FTP (FileZilla), MySQL...</p>
+                        </div>
+                    </div>
+
+                    <div className="network-item">
+                        <FaNetworkWired size={30} className="icon" />
+                        <div>
+                            <h3>Serveur dédié personnel</h3>
+                            <p>Hébergement et gestion de projets personnels sur serveur dédié auto-hébergé.</p>
+                        </div>
+                    </div>
+
+                    <div className="network-item">
+                        <FaDatabase size={30} className="icon" />
+                        <div>
+                            <h3>Hébergement & Déploiement</h3>
+                            <p>Déploiement de projets sur OVH et Ionos, gestion DNS, SSL, FTP et noms de domaine.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="marquee">
+                    <Marquee autoFill={true} className={"marquee-component"}>
+                        <div className="marquee-container">
+                            <FaDebian size={50} className="zp-anim marquee-content" />
+                            <FaLinux size={50} className="zp-anim marquee-content" />
+                            <SiIonos size={50} className="zp-anim marquee-content" />
+                            <SiOvh size={50} className="zp-anim marquee-content" />
+                        </div>
+                    </Marquee>
+                </div>
+            </div>
+
+            <div className="section graphics" id="graphics">
+                <h1>Création graphique</h1>
+
+                <div className="graphics-container">
+                    <div className="graphic-block">
+                        <h2>Visuels & maquettes</h2>
+                        <p>
+                            Je conçois des maquettes visuelles pour mes interfaces web et logicielles avant développement. Cela me permet de réfléchir à l’ergonomie, au design et à l’expérience utilisateur.
+                        </p>
+                        <ul>
+                            <li>Wireframes & UI mockups</li>
+                            <li>Prévisualisations d'interfaces</li>
+                            <li>Identité visuelle de projets</li>
+                        </ul>
+                    </div>
+
+                    <div className="graphic-block">
+                        <h2>Montage photo & vidéo</h2>
+                        <p>
+                            Je réalise des montages photo ou vidéo quand le projet l’exige : que ce soit pour illustrer un site, une présentation ou produire du contenu visuel propre.
+                        </p>
+                        <ul>
+                            <li>Retouche d’images, compositions</li>
+                            <li>Montage vidéo pour démonstrations ou réseaux</li>
+                            <li>Ajout de musiques, transitions, effets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="graphics-summary">
+                    <p>
+                        Même si ce n’est pas mon activité principale, je suis capable de produire ce type de contenus quand c’est nécessaire. J’aime garder une approche polyvalente et proactive pour servir au mieux mes projets, sans attendre que les choses soient faites à ma place.
+                    </p>
+                </div>
+            </div>
+
 
             {/* Projets */}
             <div className="section projects" id="projects">
@@ -199,7 +402,7 @@ function App() {
                 {careerInfo && (
                     <div className="career-info">
                         <h2>{careerInfo.title}</h2>
-                        <p>{careerInfo.place}, {careerInfo.year}</p>
+                        <p Style={"color:var(--accent-color); font-weight:bold"}>{careerInfo.place} - {careerInfo.year}</p>
                         <p>{careerInfo.description}</p>
                     </div>
                 )}

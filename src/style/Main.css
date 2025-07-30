@@ -38,6 +38,7 @@ a {
 
 .main-theme-button:hover {
     color: var(--accent-color);
+    filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
 
@@ -49,9 +50,7 @@ a {
     scroll-snap-align: start;
 }
 
-.projects,
-.career,
-.contact {
+.projects,.career, .contact, .network, .graphic {
     padding: 10%;
     position: relative;
     flex-direction: column;
@@ -60,9 +59,7 @@ a {
     display: flex;
 }
 
-.projects h1,
-.career h1,
-.contact h1 {
+.projects h1, .career h1, .contact h1, .skills h1, .dev h1, .network h1, .graphic h1{
     position: absolute;
     top: 5%;
     width: 100%;
@@ -70,7 +67,6 @@ a {
     font-size: 2.5rem;
     color: var(--secondary-color);
 }
-
 
 /* ==================== PRÉSENTATION - GAUCHE ==================== */
 .left-side {
@@ -177,13 +173,221 @@ a {
     filter: drop-shadow(0 0 2px var(--accent-color));
 }
 
+/* ==================== COMPETENCES ==================== */
+
+.skills, .dev, .networking, .graphics {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-summary-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.skills h2{
+    height: 20%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.development-skills-container, .networking-skills-container, .graphics-skills-container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+.skills ul{
+    height: 60%;
+    padding: 5%;
+}
+
+.skills li{
+    margin-bottom: 10px;
+    list-style-type: circle;
+}
+
+.skills a{
+    width: 75%;
+    padding: 2% ;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.skills a:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+
+.dev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 5%;
+}
+
+.dev-text{
+    width: 64%;
+    margin-bottom: 10px;
+}
+
+.dev-row{
+    margin-top: 20px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dev-element{
+    border: 1px solid #252525;
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+}
+
+.dev-element:hover{
+    transform: matrix(1, 0.1, -0.1, 1, 0, 0);
+}
+
+.dev-element-header{
+    height: 20%;
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.dev-element-header p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.dev-element-header svg{
+    margin-right: 10px;
+    fill: var(--accent-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.dev-element-header svg:hover{
+    fill: var(--secondary-color);
+    filter: drop-shadow(0 0 5px var(--secondary-color));
+    transform: rotate(10deg);
+}
+
+.dev-element-content{
+    height: 30%;
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.dev-element-element{
+    background-color: var(--accent-color);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.dev-element-element:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 5px var(--secondary-color));
+
+    transform: scale(1.1);
+}
+
+.marquee{
+    width: 40%;
+    height: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marquee-component {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marquee-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 0 32px;
+}
+
+.marquee-content:hover{
+    fill: var(--accent-color);
+}
+
+.network-content {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.network-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 1 100px;
+}
+
+.network-item svg{
+    filter: drop-shadow(0 0 2px var(--accent-color));
+}
+
+.network-item svg:hover {
+    fill: var(--secondary-color);
+    filter: drop-shadow(0 0 5px var(--secondary-color));
+    transform: matrix(1, 0.1, -0.1, 1, 0, 0);
+}
+
+.network-item .icon {
+    color: var(--accent-color);
+    margin-top: 4px;
+}
+
+
 
 /* ==================== RÉSEAUX SOCIAUX ==================== */
 .social-links {
     width: 30%;
     margin-bottom: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 5%;
 }
 
@@ -207,6 +411,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 50px;
 }
 
 .mail-container p {
@@ -220,15 +426,9 @@ a {
     color: var(--accent-color);
 }
 
-.social-container {
-    justify-content: space-evenly;
+.contact .social-links{
+    width: 200px;
 }
-
-.social-container a {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-}
-
 
 /* ==================== PARCOURS ==================== */
 .career-info {
@@ -287,3 +487,4 @@ a {
         padding: 5%;
     }
 }
+

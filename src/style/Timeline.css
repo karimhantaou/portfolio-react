@@ -15,6 +15,21 @@
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-.circle:hover ~ .pin-title, .circle:hover + .pin-title{
-    color: var(--accent-color) !important;
+.year-top, .year-bottom {
+    color:var(--secondary-color);
+    position:absolute;
+    z-index:99999;
+    background-color:var(--primary-color);
+    border:1px solid var(--secondary-color);
+    border-radius:5px;
+    padding:5px;
+    text-aligne:center;
+}
+
+.year-top{
+    bottom:-15px;
+}
+
+.year-bottom{
+    top:-15px;
 }

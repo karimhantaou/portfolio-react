@@ -14,7 +14,7 @@ const education = [
         title: "Licence Informatique",
         place:"Faculté des Sciences et des Lettres de Montpellier",
         year: "2019-2021",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
         position: "20"
     },
     {
@@ -22,7 +22,7 @@ const education = [
         title: "BTS SIO",
         place:"Esicad, Montpellier",
         year: "2023",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
         position: "50"
     },
     {
@@ -30,7 +30,7 @@ const education = [
         title: "Préparateur de commandes",
         place:"Leclerc Drive, Lattes",
         year: "2021-2023",
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
         position: "30"
     },
     {
@@ -53,7 +53,7 @@ const education = [
         type: "work",
         title: "Alternance Développeur Web Full Stack",
         place:"Lasloc",
-        year: "Septembre 2024 - Août 2025",
+        year: "Sept. 2024 - Août 2025",
         description: "",
         position: "68"
     }
