@@ -2,13 +2,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // Icônes
-import { FaGithub, FaLinkedin, FaLinux, FaServer, FaDatabase, FaNetworkWired, FaGlobe, FaDesktop, FaCode, FaCogs, FaCog, FaLaptopCode } from "react-icons/fa";
-import { FaDebian, FaBrain } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaLinux, FaServer, FaDatabase, FaNetworkWired, FaCode, FaCog, FaFileVideo} from "react-icons/fa";
+import {FaDebian, FaBrain, FaPaintbrush} from "react-icons/fa6";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { IoDesktop, IoLibrarySharp } from "react-icons/io5";
-import { SiIonos, SiOvh, SiJavascript, SiPhp, SiReact, SiNextdotjs, SiSymfony, SiElectron, SiCplusplus, SiPython } from "react-icons/si";
+import { SiIonos, SiOvh} from "react-icons/si";
 import { HiMiniGlobeAlt } from "react-icons/hi2";
+import { AiFillPicture } from "react-icons/ai";
 
 
 // Styles
@@ -27,10 +28,17 @@ import { Timeline } from './components/Timeline';
 import ResolutionWarning from "./components/ResolutionWarning";
 import education from "./Data/Education";
 import Marquee from "react-fast-marquee";
-
+import ReactCompareImage from 'react-compare-image';
+import HorizontalLine from "./components/HorizontalLine";
 
 // Fonction principale de l'application
 function App() {
+
+    // Vérifie si TouchEvent est défini, sinon crée une version vide (c'est pour éviter les erreurs dans certains environnements)
+    if (typeof TouchEvent === 'undefined') {
+        window.TouchEvent = function () {};
+    }
+
     const navRef = useRef(null);
     const [showNavBar, setShowNavBar] = useState(false);
     const [careerInfo, setCareerInfo] = useState(null);
@@ -188,16 +196,16 @@ function App() {
 
                 <div className={"skills-summary-container"}>
                     <div className={"development-skills-container"}>
-                        <h2>Développement informatique</h2>
+                        <h2> <FaCode/> Développement informatique</h2>
                         <ul>
-                            <li>WEB : PHP, Javascript, React js, Next js</li>
-                            <li>Logiciel : Java, C#, C++, Python</li>
-                            <li>Base de données : SQL, MySQL</li>
+                            <li>Développement web : frontend & backend</li>
+                            <li>Développement logiciel : desktop & scripts</li>
+                            <li>Bases de données : conception & requêtes</li>
                         </ul>
                         <a href={"#dev"}>En savoir plus</a>
                     </div>
                     <div className={"networking-skills-container"}>
-                        <h2>Systèmes et réseaux</h2>
+                        <h2> <FaNetworkWired/> Systèmes et réseaux</h2>
                         <ul>
                             <li>Administration Linux et Windows Server</li>
                             <li>Virtualisation et conteneurs (Docker)</li>
@@ -206,12 +214,12 @@ function App() {
                         <a href={"#network"}>En savoir plus</a>
                     </div>
                     <div className={"graphics-skills-container"}>
-                        <h2>Création visuel</h2>
+                        <h2> <FaPaintbrush/> Création visuel</h2>
                         <ul>
                             <li>Montage photo</li>
                             <li>Montage vidéo</li>
                         </ul>
-                        <a href={"#graphic"}>En savoir plus</a>
+                        <a href={"#graphics"}>En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -351,35 +359,47 @@ function App() {
                 <h1>Création graphique</h1>
 
                 <div className="graphics-container">
-                    <div className="graphic-block">
-                        <h2>Visuels & maquettes</h2>
-                        <p>
-                            Je conçois des maquettes visuelles pour mes interfaces web et logicielles avant développement. Cela me permet de réfléchir à l’ergonomie, au design et à l’expérience utilisateur.
-                        </p>
-                        <ul>
-                            <li>Wireframes & UI mockups</li>
-                            <li>Prévisualisations d'interfaces</li>
-                            <li>Identité visuelle de projets</li>
-                        </ul>
+                    <div className={"graphic-left-side"}>
+                        <div className="graphic-block">
+                            <h2>  <AiFillPicture/>  Visuels & maquettes</h2>
+                            <p>
+                                Je conçois des maquettes visuelles pour mes interfaces web et logicielles avant développement. Cela me permet de réfléchir à l’ergonomie, au design et à l’expérience utilisateur.
+                            </p>
+                            <ul>
+                                <li>Prévisualisations d'interfaces</li>
+                                <li>Identité visuelle de projets</li>
+                            </ul>
+                        </div>
+
+                        <HorizontalLine color={"var(--accent-color)"} height={1} width={"100%"} />
+
+                        <div className="graphic-block">
+                            <h2><FaFileVideo/> Montage photo & vidéo </h2>
+                            <p>
+                                Je réalise des montages photo ou vidéo quand le projet l’exige : que ce soit pour illustrer un site, une présentation ou produire du contenu visuel propre.
+                            </p>
+                            <ul>
+                                <li>Retouche d’images, compositions</li>
+                                <li>Montage vidéo pour démonstrations ou réseaux</li>
+                                <li>Ajout de musiques, transitions, effets</li>
+                            </ul>
+                        </div>
+
+                        <HorizontalLine color={"var(--accent-color)"} height={1} width={"100%"}/>
+
+                        <div className="graphics-summary">
+                            <p>
+                                Même si ce n’est pas mon cœur de métier, je sais produire ce type de contenus quand le projet l’exige. J’adopte une approche polyvalente et proactive, en faisant ce qu’il faut, quand il faut.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="graphic-block">
-                        <h2>Montage photo & vidéo</h2>
-                        <p>
-                            Je réalise des montages photo ou vidéo quand le projet l’exige : que ce soit pour illustrer un site, une présentation ou produire du contenu visuel propre.
-                        </p>
-                        <ul>
-                            <li>Retouche d’images, compositions</li>
-                            <li>Montage vidéo pour démonstrations ou réseaux</li>
-                            <li>Ajout de musiques, transitions, effets</li>
-                        </ul>
+                    <div className={"graphic-right-side"}>
+                        <div className={"graphics-images-slider"}>
+                            <ReactCompareImage leftImage="./images/graphic2.png" rightImage="./images/graphic1.png" />
+                        </div>
                     </div>
-                </div>
 
-                <div className="graphics-summary">
-                    <p>
-                        Même si ce n’est pas mon activité principale, je suis capable de produire ce type de contenus quand c’est nécessaire. J’aime garder une approche polyvalente et proactive pour servir au mieux mes projets, sans attendre que les choses soient faites à ma place.
-                    </p>
                 </div>
             </div>
 

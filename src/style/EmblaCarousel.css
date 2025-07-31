@@ -57,6 +57,7 @@
 
 .dot.active {
     background: var(--accent-color);
+    filter: drop-shadow(0 0 3px var(--accent-color));
 }
 
 .arrows button {
@@ -70,6 +71,7 @@
 
 .arrows button:hover {
     color: var(--accent-color);
+    filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
 .projects-title{
@@ -110,10 +112,13 @@
 
 .project-info .carousel-links a {
     color: var(--secondary-color);
+    filter: drop-shadow(0 0 2px var(--secondary-color));
 }
 
 .project-info .carousel-links a:hover {
     color: var(--accent-color);
+    filter: drop-shadow(0 0 4px var(--accent-color));
+
 }
 
 .project-tech{

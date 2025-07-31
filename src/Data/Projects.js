@@ -1,11 +1,10 @@
 const projects = [
     {
         title: "Portfolio en ligne",
-        description: "Ce portfolio en ligne a été conçu avec React.js en utilisant une architecture single-page pour une navigation fluide entre les différentes sections (présentation, compétences, projets, parcours, contact). L’interface est claire, épurée et pensée pour offrir une lecture agréable sur tous types d’écrans.\n" +
-            "\n" +
-            "Le projet intègre Embla Carousel pour la présentation des projets de manière dynamique, et React Icons pour enrichir visuellement les éléments interactifs. Chaque section est accessible via une barre de navigation fixe ou des ancres internes, rendant l’exploration rapide et intuitive.",
+        description: "Ce portfolio a été conçu avec React.js en architecture single-page, offrant une navigation fluide entre les différentes sections. L’interface est claire, responsive et pensée pour une expérience agréable sur tous les écrans.\n" +
+            "J’y ai intégré plusieurs composants pour enrichir le front-end et renforcer le dynamisme, comme Embla Carousel, Fast Marquee, React Compare Image, ainsi que des composants développés sur mesure. La navigation est intuitive grâce à une barre fixe et des ancres internes.",
         tech: "React js / JavaScript / CSS / HTML / Embla Carousel",
-        image: "./projects_assets/portfolio.png",
+        image: "./projects_assets/portfolioReact.png",
         github:"https://github.com/karimhantaou/portfolio-react",
     },
     {
