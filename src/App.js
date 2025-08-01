@@ -228,8 +228,8 @@ function App() {
             <div className="section dev" id="dev">
                 <h1>Développement informatique</h1>
 
-                <p className={"dev-text"}>J’ai évolué dans différents univers du développement, principalement orienté web.</p>
-                <p className={"dev-text"}>De la conception d’interfaces à la gestion de bases de données, j’aime toucher à tout, avec une préférence marquée pour le backend, et découvrir de nouvelles technologies au fil des projets.</p>
+                <p className={"dev-text1"}>J’ai évolué dans différents univers du développement, principalement orienté web.</p>
+                <p className={"dev-text2"}>De la conception d’interfaces à la gestion de bases de données, j’aime toucher à tout, avec une préférence marquée pour le backend, et découvrir de nouvelles technologies au fil des projets.</p>
 
                 <div className="dev-row">
 
@@ -306,7 +306,7 @@ function App() {
                             <p className={"dev-element-element"}>.Net</p>
                             <p className={"dev-element-element"}>JetBrains</p>
                             <p className={"dev-element-element"}>Visual Studio / Code</p>
-                            <p className={"dev-element-element"}>XAMPP / WAMP / MAMP </p>
+                            <p className={"dev-element-element"}>WAMP </p>
                         </div>
                     </div>
 

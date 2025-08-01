@@ -135,3 +135,16 @@
     font-style: italic;
     color: var(--accent-color);
 }
+
+@media (max-width: 1700px) {
+    .carousel-wrapper{
+        position: absolute;
+        left:12%;
+    }
+
+    .project-info {
+        position: absolute;
+        right:5%;
+        height: 70%;
+    }
+}

@@ -7,7 +7,10 @@ function ResolutionWarning() {
         const checkResolution = () => {
             const width = window.innerWidth;
             const height = window.innerHeight;
-            if (width < 1800 || height < 900) {
+
+            console.log(`Current resolution: ${width}x${height}`); // Pour le débogage
+
+            if (width < 1280 || height < 720) {
                 setShowWarning(true);
             } else {
                 setShowWarning(false);

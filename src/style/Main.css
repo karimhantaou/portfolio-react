@@ -102,6 +102,7 @@ a {
 
 .button-cv {
     width: 30%;
+    min-width: fit-content;
     margin: 60px 0 30px;
     padding: 15px 40px;
     font-size: 1.8rem;
@@ -451,7 +452,7 @@ a {
 
 /* ==================== RÉSEAUX SOCIAUX ==================== */
 .social-links {
-    width: 30%;
+    min-width: 200px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-evenly;
@@ -564,9 +565,80 @@ a {
 
 
 /* ==================== RESPONSIVE ==================== */
-@media (min-width: 2000px) {
+@media (max-width: 1700px) {
     .section {
         padding: 5%;
+    }
+
+    .left-side {
+        width: 100%;
+        padding-left: 10%;
+    }
+
+    .pfp{
+        width: 35%;
+        top: -50px;
+    }
+
+    .right-side{
+        display: none;
+    }
+
+    .skills-summary-container{
+        height: 380px;
+        justify-content: center;
+        gap: 50px
+    }
+
+    .dev-text1, .dev-text2{
+        width: 80%;
+    }
+
+    .dev-text1{
+        margin-top: 70px;
+        margin-bottom: 10px;
+    }
+
+    .dev-text2{
+        margin-bottom: 20px;
+    }
+
+    .dev-row{
+        width: 80%;
+        gap:10px;
+        padding: 0;
+        margin: 5px;
+    }
+
+    .dev-element {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .graphics-container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graphic-left-side{
+        width: 80%;
+        display: flex;
+        gap:15px;
+    }
+
+    .graphic-block{
+        width: 100%;
+    }
+
+    .graphic-right-side{
+        display: none;
+    }
+
+    .career-info{
+        width: 100%;
+        height: fit-content;
     }
 }
 
