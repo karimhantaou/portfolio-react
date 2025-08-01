@@ -1,74 +1,72 @@
 /* ==================== RESET ==================== */
+/* Remise à zéro des marges, paddings et box-sizing universel */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Scroll fluide */
 html {
     scroll-behavior: smooth;
 }
 
-html, body{
+/* Hauteur pleine et scroll vertical aligné */
+html, body {
     height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
+/* Liens sans soulignement */
 a {
     text-decoration: none;
 }
 
+/* Transition douce sur éléments cliquables et titres */
 .main, a, p, h1, h2, h3, h4, h5, h6, button {
     transition: all 0.2s ease-in-out;
 }
 
 
-/* ==================== THEME ==================== */
+/* ==================== THÈME GLOBAL ==================== */
+/* Couleurs principales de la page */
 .main {
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
 
+/* Bouton de changement de thème (transparent, sans bordure) */
 .main-theme-button {
     background: transparent;
     border: none;
     color: var(--secondary-color);
 }
-
 .main-theme-button:hover {
     color: var(--accent-color);
     filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
 
-/* ==================== SECTIONS ==================== */
+/* ==================== STRUCTURE DES SECTIONS ==================== */
+/* Base pour chaque section scrollable */
 .section {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     scroll-snap-align: start;
 }
 
-.projects,.career, .contact, .network, .graphic {
-    padding: 10%;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-.projects h1, .career h1, .contact h1, .skills h1, .dev h1, .network h1, .graphics h1{
-    position: absolute;
-    top: 5%;
-    width: 100%;
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-}
-
 /* ==================== PRÉSENTATION - GAUCHE ==================== */
+
+#presentation{
+    flex-direction: row;
+}
+
+/* Colonne gauche de présentation avec texte et bouton */
+
 .left-side {
     width: 80%;
     height: 100%;
@@ -77,11 +75,19 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+}
+
+.profile{
+    width: 100%;
+    display: flex;
+    align-items: end;
 }
 
 .name {
     font-size: 3rem;
     font-weight: 600;
+    margin-right: 20px;
 }
 
 .title {
@@ -91,10 +97,7 @@ a {
 }
 
 .pfp {
-    width: 10em;
-    position: absolute;
-    right: -12em;
-    top: -6em;
+    width: 15vh;
     border-radius: 50%;
     transform: scaleX(-1);
     border: 2px solid var(--secondary-color);
@@ -114,7 +117,6 @@ a {
     cursor: pointer;
     box-shadow: 0 0 10px var(--accent-color);
 }
-
 .button-cv:hover {
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -130,6 +132,7 @@ a {
 
 
 /* ==================== PRÉSENTATION - DROITE ==================== */
+/* Colonne droite avec sommaire et liens internes */
 .right-side {
     width: 30%;
     height: 100%;
@@ -162,74 +165,75 @@ a {
     justify-content: space-around;
     gap: 10px;
 }
-
 .links a {
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--secondary-color);
 }
-
 .links a:hover {
     color: var(--accent-color);
     filter: drop-shadow(0 0 2px var(--accent-color));
 }
 
-/* ==================== COMPETENCES ==================== */
 
-.skills, .dev, .networking, .graphics {
-    position: relative;
+/* ==================== COMPÉTENCES ==================== */
+
+.skills h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: clamp(2rem, 2vw, 3rem); /* Adaptable selon écran */
 }
 
-.skills-summary-container{
-    width: 100%;
-    height: 30%;
+/* Icônes résumé des compétences */
+.skills-summary-container {
+    width: 80%;
+    height: 80%;
     display: flex;
     justify-content: center;
-    gap: 2%;
+    align-items: center;
+    gap: 10%;
 }
-
-.skills-summary-container svg{
+.skills-summary-container svg {
     fill: var(--accent-color);
     filter: drop-shadow(0 0 2px var(--accent-color));
-    transition: all 0.2s ease-in-out;
 }
-
-.skills-summary-container svg:hover{
+.skills-summary-container svg:hover {
     fill: var(--secondary-color);
     filter: drop-shadow(0 0 5px var(--secondary-color));
     transform: rotate(10deg) scale(1.2);
 }
 
-.skills h2{
+/* Sous-blocs par domaine */
+.development-skills-container, .networking-skills-container, .graphics-skills-container {
+    width: fit-content;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills h2 {
     height: 20%;
     width: 100%;
     text-align: center;
-
+    font-size: clamp(1.2rem, 1.3vw, 3.5rem);
 }
 
-.development-skills-container, .networking-skills-container, .graphics-skills-container{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;}
-
-.skills ul{
+.skills ul {
     height: 60%;
     padding: 5%;
 }
-
-.skills li{
+.skills li {
     margin-bottom: 10px;
     list-style-type: circle;
 }
-
-.skills a{
+.skills a {
     width: 75%;
-    padding: 2% ;
+    padding: 2%;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -239,7 +243,6 @@ a {
     cursor: pointer;
     box-shadow: 0 0 10px var(--accent-color);
 }
-
 .skills a:hover {
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -248,111 +251,112 @@ a {
 }
 
 
-.dev{
+/* ==================== DÉVELOPPEMENT ==================== */
+
+.dev h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    padding-top: 5%;
+    width: 100%;
+    height: 20%;
+    font-size: clamp(2rem, 2vw, 3rem); /* Adaptable selon écran */
 }
+
 
 .dev-text{
-    width: 64%;
-    margin-bottom: 10px;
+    width: 75%;
 }
 
-.dev-row{
-    margin-top: 20px;
-    width: 65%;
+.dev-row-container{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 20px;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
 }
 
-.dev-element{
+.dev-row {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.dev-element {
     border: 1px solid #252525;
     border-radius: 15px;
-    padding: 30px;
-    width: 400px;
-    height: 200px;
+    padding: 1vh;
+    width: 40vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease-in-out;
 }
-
-.dev-element:hover{
+.dev-element:hover {
     transform: matrix(1, 0.1, -0.1, 1, 0, 0);
 }
 
-.dev-element-header{
+.dev-element-header {
     height: 20%;
-    display:flex;
+    display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.dev-element-header p{
-    font-size: 1.2rem;
+.dev-element-header p {
+    font-size: 1rem;
     font-weight: bold;
     color: var(--secondary-color);
 }
-
-.dev-element-header svg{
+.dev-element-header svg {
     margin-right: 10px;
     fill: var(--accent-color);
     filter: drop-shadow(0 0 2px var(--accent-color));
-    transition: all 0.2s ease-in-out;
 }
-
-.dev-element-header svg:hover{
+.dev-element-header svg:hover {
     fill: var(--secondary-color);
     filter: drop-shadow(0 0 5px var(--secondary-color));
     transform: rotate(10deg);
 }
 
-.dev-element-content{
+.dev-element-content {
     height: 30%;
     display: flex;
     gap: 10px;
     padding: 15px;
     flex-wrap: wrap;
 }
-
-.dev-element-element{
+.dev-element-element {
     background-color: var(--accent-color);
     font-weight: bold;
-    padding: 5px;
+    padding: 4px;
     border-radius: 10px;
+    font-size: 0.9rem;
 }
-
-.dev-element-element:hover{
+.dev-element-element:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     filter: drop-shadow(0 0 5px var(--secondary-color));
-
     transform: scale(1.1);
 }
 
+
+/* ==================== MARQUEE ==================== */
 .marquee{
+    height: 20%;
+
+}
+.marquee, .marquee-component {
     width: 40%;
-    height: 40%;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.marquee-component {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.marquee-container{
+.marquee-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -360,97 +364,143 @@ a {
     gap: 64px;
     padding: 0 32px;
 }
-
-.marquee-content:hover{
+.marquee-content:hover {
     fill: var(--accent-color);
 }
 
+
+/* ==================== Systèmes et réseaux ==================== */
+
+.network h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: clamp(2rem, 2vw, 3rem); /* Adaptable selon écran */
+}
+
 .network-content {
-    margin-top: 5%;
+    height: 60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    justify-content: space-evenly;
+
 }
 
 .network-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    flex: 1 1 100px;
 }
-
-.network-item svg{
+.network-item svg {
     filter: drop-shadow(0 0 2px var(--accent-color));
 }
-
 .network-item svg:hover {
     fill: var(--secondary-color);
     filter: drop-shadow(0 0 5px var(--secondary-color));
     transform: matrix(1, 0.1, -0.1, 1, 0, 0);
 }
-
 .network-item .icon {
     color: var(--accent-color);
     margin-top: 4px;
 }
 
-.graphics-container{
-    margin-top: 5%;
+
+/* ==================== COMPÉTENCES GRAPHIQUES ==================== */
+
+.graphics{
     display: flex;
-    gap:50px;
+    flex-direction: column;
+}
+
+.graphics h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: clamp(2rem, 2vw, 3rem); /* Adaptable selon écran */
+}
+
+.graphics-container {
+    display: flex;
     width: 60%;
+    height: 80%;
+    gap: 5%;
 }
 
 .graphic-left-side, .graphic-right-side {
-    width: 50%;
+    height: 90%;
 }
 
 .graphic-left-side{
+    width: 70%;
+}
+
+.graphic-right-side{
+    width:30%;
+}
+
+.graphic-left-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap: 2vh;
 }
-
-.graphic-block{
+.graphic-block {
     width: 100%;
 }
-
-.graphic-block svg{
+.graphic-block svg {
     margin-right: 20px;
     fill: var(--accent-color);
     filter: drop-shadow(0 0 2px var(--accent-color));
-    transition: all 0.2s ease-in-out;
 }
-
-.graphic-block svg:hover{
+.graphic-block svg:hover {
     fill: var(--secondary-color);
     filter: drop-shadow(0 0 5px var(--secondary-color));
     transform: rotate(10deg) scale(1.2);
 }
 
-.graphic-block h2{
-    width: 100%;
-    margin-bottom: 20px;
+.graphic-block h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.graphic-block p{
+.graphic-block h2, .graphic-block p, .graphic-block ul {
     width: 100%;
+}
+.graphic-block p {
     margin-bottom: 30px;
 }
-
-.graphic-block ul{
-    width: 100%;
+.graphic-block ul {
     padding: 0 40px;
 }
-
-.graphic-block li{
+.graphic-block li {
     margin-bottom: 10px;
     list-style-type: circle;
 }
 
-/* ==================== RÉSEAUX SOCIAUX ==================== */
+.graphic-right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.graphics-images-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.reactCompareImage{
+}
+
+/* ==================== LIENS SOCIAUX ==================== */
 .social-links {
     min-width: 200px;
     margin-bottom: 30px;
@@ -458,11 +508,9 @@ a {
     justify-content: space-evenly;
     gap: 5%;
 }
-
 .social-links a {
     color: var(--secondary-color);
 }
-
 .social-links a:hover {
     color: var(--accent-color);
     filter: drop-shadow(0 0 2px var(--accent-color));
@@ -474,44 +522,35 @@ a {
     width: 30%;
     display: flex;
 }
-
 .mail-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     margin-bottom: 50px;
 }
-
 .mail-container p {
     font-size: 2rem;
     filter: drop-shadow(0 0 5px var(--secondary-color));
-    transition: all 0.2s ease-in-out;
 }
-
-.mail-container p:hover{
+.mail-container p:hover {
     filter: drop-shadow(0 0 5px var(--accent-color));
 }
-
 .copy-notification {
     font-size: 1.2rem !important;
     margin-top: 10px;
     visibility: hidden;
     color: var(--accent-color);
 }
-
-.contact .social-links{
+.contact .social-links {
     width: 200px;
 }
-
-.contact svg{
+.contact svg {
     filter: drop-shadow(0 0 2px var(--secondary-color));
-    transition: all 0.2s ease-in-out;
 }
-
-.contact svg:hover{
+.contact svg:hover {
     filter: drop-shadow(0 0 2px var(--accent-color));
 }
+
 
 /* ==================== PARCOURS ==================== */
 .career-info {
@@ -524,11 +563,9 @@ a {
     align-items: center;
     text-align: center;
 }
-
 .career-info h2 {
     text-align: center;
 }
-
 .career-info p {
     margin-bottom: 20px;
 }
@@ -539,10 +576,8 @@ a {
     transition: transform 0.2s;
     width: fit-content;
 }
-
 .zp-anim:hover {
     transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
 }
 
 
@@ -556,7 +591,6 @@ a {
     font-size: 1.2rem;
     filter: drop-shadow(0 0 5px var(--accent-color));
 }
-
 .popup-button:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -565,80 +599,13 @@ a {
 
 
 /* ==================== RESPONSIVE ==================== */
+
 @media (max-width: 1700px) {
-    .section {
-        padding: 5%;
-    }
-
-    .left-side {
-        width: 100%;
-        padding-left: 10%;
-    }
-
-    .pfp{
-        width: 35%;
-        top: -50px;
-    }
-
-    .right-side{
+    #presentation .right-side{
         display: none;
     }
-
-    .skills-summary-container{
-        height: 380px;
-        justify-content: center;
-        gap: 50px
-    }
-
-    .dev-text1, .dev-text2{
-        width: 80%;
-    }
-
-    .dev-text1{
-        margin-top: 70px;
-        margin-bottom: 10px;
-    }
-
-    .dev-text2{
-        margin-bottom: 20px;
-    }
-
-    .dev-row{
-        width: 80%;
-        gap:10px;
-        padding: 0;
-        margin: 5px;
-    }
-
-    .dev-element {
-        width: 300px;
-        height: 200px;
-        margin-bottom: 20px;
-    }
-
-    .graphics-container{
+    #presentation .left-side {
         width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .graphic-left-side{
-        width: 80%;
-        display: flex;
-        gap:15px;
-    }
-
-    .graphic-block{
-        width: 100%;
-    }
-
-    .graphic-right-side{
-        display: none;
-    }
-
-    .career-info{
-        width: 100%;
-        height: fit-content;
+        padding-left: 15%;
     }
 }
-

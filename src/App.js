@@ -144,7 +144,7 @@ function App() {
             {/* Présentation */}
             <div className="section" id="presentation">
                 <div className="left-side">
-                    <div style={{ display: 'flex', position: 'relative' }}>
+                    <div className="profile">
                         <p className="name">Hantaou Karim</p>
                         <img src="./images/photo5.png" className="pfp" alt="Profil" />
                     </div>
@@ -228,91 +228,100 @@ function App() {
             <div className="section dev" id="dev">
                 <h1>Développement informatique</h1>
 
-                <p className={"dev-text1"}>J’ai évolué dans différents univers du développement, principalement orienté web.</p>
-                <p className={"dev-text2"}>De la conception d’interfaces à la gestion de bases de données, j’aime toucher à tout, avec une préférence marquée pour le backend, et découvrir de nouvelles technologies au fil des projets.</p>
+                <div className="dev-row-container">
 
-                <div className="dev-row">
+                    <div className="dev-text">
+                        <p>De la conception d’interfaces à la gestion de bases de données, j’aime toucher à tout, avec une préférence marquée pour le backend, et découvrir de nouvelles technologies au fil des projets.</p>
+                    </div>
 
-                    <div className={"dev-element"}>
-                        <div className={"dev-element-header"}>
-                            <HiMiniGlobeAlt size={30} className="icon" />
-                            <p className={"dev-element-title"}>Langages Web</p>
+                    <div className="dev-row">
+
+                        <div className={"dev-element"}>
+                            <div className={"dev-element-header"}>
+                                <HiMiniGlobeAlt size={25} className="icon" />
+                                <p className={"dev-element-title"}>Langages Web</p>
+                            </div>
+                                <div className="dev-element-content">
+                                    <p className={"dev-element-element"}>Javascript</p>
+                                    <p className={"dev-element-element"}>PHP</p>
+                                    <p className={"dev-element-element"}>HTML/CSS</p>
+                            </div>
                         </div>
+
+                        <div className={"dev-element"}>
+                            <div className={"dev-element-header"}>
+                                <FaBrain size={25} className="icon" />
+                                <p className={"dev-element-title"}>Langages pour logiciels</p>
+                            </div>
                             <div className="dev-element-content">
-                                <p className={"dev-element-element"}>Javascript</p>
-                                <p className={"dev-element-element"}>PHP</p>
-                                <p className={"dev-element-element"}>HTML/CSS</p>
+                                <p className={"dev-element-element"}>Java</p>
+                                <p className={"dev-element-element"}>C#</p>
+                                <p className={"dev-element-element"}>C++</p>
+                                <p className={"dev-element-element"}>Python</p>
+                            </div>
                         </div>
+
+
+                        <div className={"dev-element"}>
+                            <div className={"dev-element-header"}>
+                                <IoLibrarySharp size={25} className="icon" />
+                                <p className={"dev-element-title"}>Frameworks & bibliothèques</p>
+                            </div>
+                            <div className="dev-element-content">
+                                <p className={"dev-element-element"}>React js</p>
+                                <p className={"dev-element-element"}>Next js</p>
+                                <p className={"dev-element-element"}>Symfony</p>
+                                <p className={"dev-element-element"}>Electron</p>
+                            </div>
+                        </div>
+
                     </div>
+                    <div className={"dev-row"}>
 
-                    <div className={"dev-element"}>
-                        <div className={"dev-element-header"}>
-                            <FaBrain size={30} className="icon" />
-                            <p className={"dev-element-title"}>Langages pour logiciels</p>
+                        <div className={"dev-element"}>
+                            <div className={"dev-element-header"}>
+                                <FaDatabase size={25} className="icon" />
+                                <p className={"dev-element-title"}>Bases de données</p>
+                            </div>
+                            <div className="dev-element-content">
+                                <p className={"dev-element-element"}>SQL</p>
+                                <p className={"dev-element-element"}>MySQL</p>
+                                <p className={"dev-element-element"}>MongoDB</p>
+                                <p className={"dev-element-element"}>PostgreSQL</p>
+                            </div>
                         </div>
-                        <div className="dev-element-content">
-                            <p className={"dev-element-element"}>Java</p>
-                            <p className={"dev-element-element"}>C#</p>
-                            <p className={"dev-element-element"}>C++</p>
-                            <p className={"dev-element-element"}>Python</p>
-                        </div>
-                    </div>
 
+                        <div className={"dev-element"}>
+                            <div className={"dev-element-header"}>
+                                <FaCog size={25} className="icon" />
+                                <p className={"dev-element-title"}>Outils et technologies</p>
+                            </div>
+                            <div className="dev-element-content">
+                                <p className={"dev-element-element"}>Git</p>
+                                <p className={"dev-element-element"}>GitHub</p>
+                                <p className={"dev-element-element"}>Agile/Scrum</p>
+                            </div>
+                        </div>
 
-                    <div className={"dev-element"}>
-                        <div className={"dev-element-header"}>
-                            <IoLibrarySharp size={30} className="icon" />
-                            <p className={"dev-element-title"}>Frameworks & bibliothèques</p>
+                        <div className={"dev-element"}>
+                            <div className={"dev-element-header"}>
+                                <IoDesktop size={25} className="icon" />
+                                <p className={"dev-element-title"}>Environnements de travail</p>
+                            </div>
+                            <div className="dev-element-content">
+                                <p className={"dev-element-element"}>.Net</p>
+                                <p className={"dev-element-element"}>JetBrains</p>
+                                <p className={"dev-element-element"}>Visual Studio / Code</p>
+                                <p className={"dev-element-element"}>WAMP </p>
+                            </div>
                         </div>
-                        <div className="dev-element-content">
-                            <p className={"dev-element-element"}>React js</p>
-                            <p className={"dev-element-element"}>Next js</p>
-                            <p className={"dev-element-element"}>Symfony</p>
-                            <p className={"dev-element-element"}>Electron</p>
-                        </div>
-                    </div>
 
-                    <div className={"dev-element"}>
-                        <div className={"dev-element-header"}>
-                            <FaDatabase size={30} className="icon" />
-                            <p className={"dev-element-title"}>Bases de données</p>
-                        </div>
-                        <div className="dev-element-content">
-                            <p className={"dev-element-element"}>SQL</p>
-                            <p className={"dev-element-element"}>MySQL</p>
-                            <p className={"dev-element-element"}>MongoDB</p>
-                            <p className={"dev-element-element"}>PostgreSQL</p>
-                        </div>
-                    </div>
-
-                    <div className={"dev-element"}>
-                        <div className={"dev-element-header"}>
-                            <FaCog size={30} className="icon" />
-                            <p className={"dev-element-title"}>Outils et technologies</p>
-                        </div>
-                        <div className="dev-element-content">
-                            <p className={"dev-element-element"}>Git</p>
-                            <p className={"dev-element-element"}>GitHub</p>
-                            <p className={"dev-element-element"}>Agile/Scrum</p>
-                        </div>
-                    </div>
-
-                    <div className={"dev-element"}>
-                        <div className={"dev-element-header"}>
-                            <IoDesktop size={30} className="icon" />
-                            <p className={"dev-element-title"}>Environnements de travail</p>
-                        </div>
-                        <div className="dev-element-content">
-                            <p className={"dev-element-element"}>.Net</p>
-                            <p className={"dev-element-element"}>JetBrains</p>
-                            <p className={"dev-element-element"}>Visual Studio / Code</p>
-                            <p className={"dev-element-element"}>WAMP </p>
-                        </div>
                     </div>
 
                 </div>
 
             </div>
+
 
             <div className="section network" id="network">
                 <h1>Systèmes et réseaux</h1>
@@ -396,7 +405,7 @@ function App() {
 
                     <div className={"graphic-right-side"}>
                         <div className={"graphics-images-slider"}>
-                            <ReactCompareImage leftImage="./images/graphic2.png" rightImage="./images/graphic1.png" />
+                            <ReactCompareImage leftImage="./images/graphic2.png" rightImage="./images/graphic1.png" sliderLineColor={"var(--secondary-color)"} sliderPositionPercentage={0.1} className={"reactCompareImage"}/>
                         </div>
                     </div>
 
@@ -404,13 +413,12 @@ function App() {
             </div>
 
 
-            {/* Projets */}
             <div className="section projects" id="projects">
                 <h1>Mes projets</h1>
                 <EmblaCarousel />
             </div>
 
-            {/* Parcours */}
+
             <div className="section career" id="career">
                 <h1>Mon parcours</h1>
                 <p style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
@@ -428,7 +436,7 @@ function App() {
                 )}
             </div>
 
-            {/* Contact */}
+
             <div className="section contact" id="contact">
                 <h1>Me contacter</h1>
 
@@ -442,6 +450,7 @@ function App() {
                     <a href="https://www.linkedin.com/in/karim-hantaou/"><FaLinkedin size={50} className="zp-anim" /></a>
                 </div>
             </div>
+
         </div>
     );
 }
