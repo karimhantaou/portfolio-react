@@ -9,9 +9,7 @@ const projects = [
     },
     {
         title: "Helios WeatherApp",
-        description: "Helios est une application web Flutter qui utilise l’API météo de open-meteo.com pour afficher les conditions météorologiques en temps réel d’une ville saisie par l’utilisateur. Elle affiche des données comme la température actuelle et ressentie, l’humidité, le vent, les précipitations ou encore la couverture nuageuse. L’interface visuelle s’adapte dynamiquement selon les conditions météo (ensoleillé, nuageux, nuit claire, pluie, vent…).\n" +
-            "\n" +
-            "L’utilisateur peut ajouter des villes en favoris grâce à une icône cœur, avec une gestion des favoris sauvegardée localement. Une page dédiée permet de consulter ou supprimer facilement les villes enregistrées. L’expérience est simple, rapide et visuellement immersive.",
+        description: "Helios est une application web Flutter qui utilise l’API météo de open-meteo.com pour afficher les conditions météorologiques en temps réel d’une ville saisie par l’utilisateur. Elle affiche des données comme la température actuelle et ressentie, l’humidité, le vent, les précipitations ou encore la couverture nuageuse. L’interface visuelle s’adapte dynamiquement selon les conditions météo (ensoleillé, nuageux, nuit claire, pluie, vent…).",
         tech: "Flutter / Dart / API Open-Meteo",
         image: "./projects_assets/helios.gif",
         github:"https://github.com/karimhantaou/Helios_WeatherApp",

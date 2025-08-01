@@ -1,13 +1,14 @@
 .embla-carousel-container{
+    width: 90%;
+    height: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 5%;
 }
 
 
 .carousel-wrapper {
-    width: 50%;
+    width: 40vw;
     text-align: center;
 }
 
@@ -134,17 +135,4 @@
     text-align: center;
     font-style: italic;
     color: var(--accent-color);
-}
-
-@media (max-width: 1700px) {
-    .carousel-wrapper{
-        position: absolute;
-        left:12%;
-    }
-
-    .project-info {
-        position: absolute;
-        right:5%;
-        height: 70%;
-    }
 }

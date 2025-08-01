@@ -87,20 +87,6 @@ function App() {
         };
     }, []);
 
-    // Initialise les informations de la première entrée du parcours
-    useEffect(() => {
-        const firstItem = education[0];
-
-        if (firstItem) {
-            setCareerInfo({
-                title: firstItem.title,
-                description: firstItem.description,
-                place: firstItem.place,
-                year: firstItem.year
-            });
-        }
-
-    }, []);
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -419,6 +405,7 @@ function App() {
             </div>
 
 
+
             <div className="section career" id="career">
                 <h1>Mon parcours</h1>
                 <p style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
@@ -428,10 +415,15 @@ function App() {
                 <Timeline onPinClick={handlePinClick} />
 
                 {careerInfo && (
-                    <div className="career-info">
-                        <h2>{careerInfo.title}</h2>
-                        <p Style={"color:var(--accent-color); font-weight:bold"}>{careerInfo.place} - {careerInfo.year}</p>
-                        <p>{careerInfo.description}</p>
+                    <div className="popup-overlay" onClick={() => setCareerInfo(null)}>
+                        <div className="popup-content" onClick={e => e.stopPropagation()}>
+                            <button className="popup-close" onClick={() => setCareerInfo(null)}>&times;</button>
+                            <h2>{careerInfo.title}</h2>
+                            <p style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
+                                {careerInfo.place} - {careerInfo.year}
+                            </p>
+                            <p>{careerInfo.description}</p>
+                        </div>
                     </div>
                 )}
             </div>
@@ -440,14 +432,17 @@ function App() {
             <div className="section contact" id="contact">
                 <h1>Me contacter</h1>
 
-                <div className="mail-container">
-                    <p className="copy-notification">Mail copié !</p>
-                    <CopyText text="karim.hantaou@gmail.com" />
-                </div>
 
-                <div className="social-links">
-                    <a href="https://github.com/karimhantaou/"><FaGithub size={50} className="zp-anim" /></a>
-                    <a href="https://www.linkedin.com/in/karim-hantaou/"><FaLinkedin size={50} className="zp-anim" /></a>
+                <div className={"contact-container"}>
+                    <div className="mail-container">
+                        <p className="copy-notification">Mail copié !</p>
+                        <CopyText text="karim.hantaou@gmail.com" />
+                    </div>
+
+                    <div className="social-links">
+                        <a href="https://github.com/karimhantaou/"><FaGithub size={50} className="zp-anim" /></a>
+                        <a href="https://www.linkedin.com/in/karim-hantaou/"><FaLinkedin size={50} className="zp-anim" /></a>
+                    </div>
                 </div>
             </div>
 

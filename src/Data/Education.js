@@ -28,7 +28,7 @@ const education = [
             "programmation orientée objet (C#, Java), développement web (HTML, CSS, JS), frameworks modernes (React, Next.js, Flutter), et gestion de projet avec les méthodes Agile/Scrum.\n" +
             "J’y ai aussi appris à modéliser efficacement (diagrammes UML) et à produire de la documentation technique structurée.\n" +
             "Cette formation m’a donné une vraie polyvalence et une vision complète du cycle de développement.",
-        position: "50"
+        position: "45"
     },
     {
         type: "work",
@@ -37,7 +37,7 @@ const education = [
         year: "2021-2023",
         description: "J’ai travaillé près de 3 ans chez Leclerc Drive en tant que préparateur de commande.\n" +
             "Cette expérience m’a appris la rigueur, la gestion du temps et le travail en équipe dans un environnement exigeant.",
-        position: "30"
+        position: "25"
     },
     {
         type: "education",
@@ -56,7 +56,7 @@ const education = [
         year: "Mars 2024 - Juin 2024",
         description: "Lors de ce stage, j’ai réalisé un site vitrine pour l’entreprise, en respectant la charte graphique définie.\n" +
             "J’ai participé à des réunions hebdomadaires, ce qui m’a permis de mieux comprendre les besoins clients et de collaborer efficacement avec l’équipe.",
-        position: "50"
+        position: "45"
     },
     {
         type: "work",
@@ -65,7 +65,7 @@ const education = [
         year: "Sept. 2024 - Août 2025",
         description: "J’ai poursuivi mon parcours chez Lasloc en alternance, en me concentrant principalement sur le développement backend.\n" +
             "J’ai notamment travaillé sur la gestion des utilisateurs, la gestion de catalogue (véhicules) et l’intégration d’un système de paiement en ligne via Stripe.",
-        position: "68"
+        position: "65"
     }
 
 ];

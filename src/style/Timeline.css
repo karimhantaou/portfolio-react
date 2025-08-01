@@ -1,7 +1,9 @@
 .timeline {
     position: relative;
-    width: 80%;
-    height: 75%;
+    width: 65%;
+    min-height: 400px;
+    height: 50%;
+    font-size: clamp(0.8rem, 0.8vw, 3em); /* Adaptable selon écran */
 }
 
 .circle{
