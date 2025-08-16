@@ -8,7 +8,7 @@ function ResolutionWarning() {
             const width = window.innerWidth;
             const height = window.innerHeight;
 
-            console.log(`Current resolution: ${width}x${height}`); // Pour le débogage
+            console.log(`Current resolution: ${width}x${height}`);
 
             if (width < 1280 || height < 720) {
                 setShowWarning(true);
@@ -18,7 +18,7 @@ function ResolutionWarning() {
         };
 
         checkResolution(); // Vérifie au chargement
-        window.addEventListener('resize', checkResolution); // Optionnel : si tu veux réagir en temps réel
+        window.addEventListener('resize', checkResolution);
 
         return () => window.removeEventListener('resize', checkResolution);
     }, []);
@@ -40,23 +40,8 @@ function ResolutionWarning() {
             zIndex: 9999999
         }}>
             <div style={{ textAlign: 'center', maxWidth: '90%' }}>
-                <h2>💡 Résolution insuffisante</h2>
-                <p>Ce site est optimisé pour une résolution d'au moins 1920x1080.</p>
-                <button
-                    onClick={() => {
-                        const elem = document.documentElement;
-                        if (elem.requestFullscreen) {
-                            elem.requestFullscreen();
-                        } else if (elem.webkitRequestFullscreen) {
-                            elem.webkitRequestFullscreen(); // Safari
-                        } else if (elem.msRequestFullscreen) {
-                            elem.msRequestFullscreen(); // IE/Edge
-                        }
-                    }}
-                    className={"popup-button zp-anim"}
-                >
-                    Passer en plein écran
-                </button>
+                <h2>💡 Taille de l'écran trop petit</h2>
+                <p>Ce site n'est pas optimisé pour les mobiles !</p>
             </div>
         </div>
     );
