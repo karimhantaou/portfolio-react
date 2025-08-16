@@ -25,7 +25,6 @@ import NavBar from "./components/NavBar";
 import CopyText from "./components/CopyText";
 import { EmblaCarousel } from "./components/EmblaCarousel";
 import { Timeline } from './components/Timeline';
-import ResolutionWarning from "./components/ResolutionWarning";
 import education from "./Data/Education";
 import Marquee from "react-fast-marquee";
 import ReactCompareImage from 'react-compare-image';
@@ -42,36 +41,6 @@ function App() {
     const navRef = useRef(null);
     const [showNavBar, setShowNavBar] = useState(false);
     const [careerInfo, setCareerInfo] = useState(null);
-    const [theme, setThemeState] = useState('dark');
-
-    // Applique le thème au DOM
-    const applyTheme = (theme) => {
-        const root = document.documentElement;
-
-        if (theme === 'dark') {
-            root.style.setProperty('--primary-color', '#0f0f0f');
-            root.style.setProperty('--secondary-color', '#EEEEEE');
-        } else {
-            root.style.setProperty('--primary-color', '#ffffff');
-            root.style.setProperty('--secondary-color', '#111111');
-        }
-
-        root.style.setProperty('--accent-color', '#ff0d39');
-        localStorage.setItem('theme', theme);
-        setThemeState(theme);
-    };
-
-    // Toggle light/dark mode
-    const changeTheme = () => {
-        const nextTheme = theme === 'dark' ? 'light' : 'dark';
-        applyTheme(nextTheme);
-    };
-
-    // Initialisation du thème
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        applyTheme(savedTheme);
-    }, []);
 
     // Observe la section "contact" pour afficher NavBar
     useEffect(() => {
@@ -109,23 +78,6 @@ function App() {
 
     return (
         <div className="main">
-            <ResolutionWarning />
-            {showNavBar &&
-                <nav>
-
-                    <VerticalLine height="100%" width="3" color="var(--accent-color)" />
-
-                    <div className="nav-links">
-                        <a href="#presentation" >A propos</a>
-                        <a href="#skills">Compétences</a>
-                        <a href="#projects">Projets</a>
-                        <a href="#career">Parcours</a>
-                        <a href="#contact">Contacter</a>
-                        <button onClick={changeTheme} className={"main-theme-button zp-anim"}>
-                            {localStorage.getItem('theme') === 'dark' ? <MdDarkMode size={25}/> : <MdLightMode size={25}/>}
-                        </button>
-                    </div>
-                </nav>}
 
             {/* Présentation */}
             <div className="section" id="presentation">
@@ -168,9 +120,6 @@ function App() {
                             <a href="#projects">Mes projets</a>
                             <a href="#career">Mon parcours</a>
                             <a href="#contact" ref={navRef}>Me contacter</a>
-                            <button onClick={changeTheme} className="main-theme-button zp-anim">
-                                {theme === 'dark' ? <MdDarkMode size={30} /> : <MdLightMode size={30} />}
-                            </button>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,10 @@
+root{
+    --primary-color: #0f0f0f; /* Couleur principale de fond */
+    --secondary-color: #EEEEEE; /* Couleur secondaire pour le texte */
+    --accent-color: #ff5722; /* Couleur d'accentuation pour les éléments interactifs */
+}
+
+
 /* ==================== RESET ==================== */
 /* Remise à zéro des marges, paddings et box-sizing universel */
 * {
