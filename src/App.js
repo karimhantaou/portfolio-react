@@ -198,10 +198,13 @@ function App() {
                                 <p className={"dev-element-element"}>WAMP </p>
                             </div>
                         </div>
-
-
                 </div>
+            </div>
 
+
+            <div className={"section"}>
+                <h1>Projets</h1>
+                <EmblaCarousel/>
             </div>
 
             <div className="section contact" id="contact">
