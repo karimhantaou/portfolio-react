@@ -11,7 +11,7 @@ function ResolutionWarning() {
             console.log(`Current resolution: ${width}x${height}`);
 
             if (width < 1280 || height < 720) {
-                setShowWarning(true);
+                window.location.href = "https://hantaoukarim.fr/mobile/";
             } else {
                 setShowWarning(false);
             }
