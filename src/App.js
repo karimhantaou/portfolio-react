@@ -73,6 +73,8 @@ function App() {
     return (
         <div className="main">
 
+            <
+
             {/* Présentation */}
             <div className="section" id="presentation">
                 <div className="left-side">
