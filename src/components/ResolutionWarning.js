@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
 function ResolutionWarning() {
-    const [showWarning, setShowWarning] = useState(false);
-
     useEffect(() => {
         const checkResolution = () => {
             const width = window.innerWidth;
@@ -10,7 +8,7 @@ function ResolutionWarning() {
 
             console.log(`Current resolution: ${width}x${height}`);
 
-            if (width > 1280 || height > 720) {
+            if (width > 480 && height > 746) {
                 window.location.href = "https://hantaoukarim.fr/";
             }
         };

@@ -29,6 +29,7 @@ import education from "./Data/Education";
 import Marquee from "react-fast-marquee";
 import ReactCompareImage from 'react-compare-image';
 import HorizontalLine from "./components/HorizontalLine";
+import ResolutionWarning from "./components/ResolutionWarning";
 
 // Fonction principale de l'application
 function App() {
@@ -73,7 +74,7 @@ function App() {
     return (
         <div className="main">
 
-            <
+            <ResolutionWarning />
 
             {/* Présentation */}
             <div className="section" id="presentation">
