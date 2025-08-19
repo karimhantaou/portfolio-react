@@ -107,6 +107,11 @@ function App() {
             </div>
 
 
+            <div className={"section dev-skills"}>
+
+
+            </div>
+
             <div className="section contact" id="contact">
                 <h1>Me contacter</h1>
 
