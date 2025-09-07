@@ -4,11 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /* Scroll fluide */
 html {
     scroll-behavior: smooth;
+    min-width: 1585px;
+    min-height: 707px;
 }
 
 /* Hauteur pleine et scroll vertical aligné */
@@ -633,6 +636,10 @@ a {
     #presentation .left-side {
         width: 100%;
         padding-left: 15%;
+    }
+
+    .dev-row{
+        flex-wrap: wrap;
     }
 }
 
