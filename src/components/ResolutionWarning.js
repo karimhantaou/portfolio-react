@@ -10,7 +10,11 @@ function ResolutionWarning() {
 
             if (width < 480 && height < 746) {
                 window.location.href = "https://hantaoukarim.fr/mobile/";
-                }
+            } else{
+                window.location.href = "https://hantaoukarim.fr/";
+            }
+
+            
         };
 
         checkResolution(); // Vérifie au chargement

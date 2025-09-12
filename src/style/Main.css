@@ -10,7 +10,7 @@
 /* Scroll fluide */
 html {
     scroll-behavior: smooth;
-    min-width: 1585px;
+    min-width: 1400;
     min-height: 707px;
 }
 
