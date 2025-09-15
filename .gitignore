@@ -25,3 +25,9 @@ yarn-error.log*
 
 # projects assets
 /public/projects_assets/
+/public/images/
+/public/pdfs/
+
+# IDE
+/.idea
+/docs
