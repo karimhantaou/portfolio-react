@@ -5,6 +5,8 @@ Ce projet présente mes compétences, mes projets réalisés et me permet de me 
 
 Accéder au portfolio : [hantaoukarim.fr](https://hantaoukarim.fr/)
 
+<img width="50%" alt="Capture d'écran 2025-09-15 115320" src="https://github.com/user-attachments/assets/6346ebc9-5d36-48aa-8d78-afc13795a4ee" />
+
 ## 🚀 Fonctionnalités
 
 - Développé avec React.js
