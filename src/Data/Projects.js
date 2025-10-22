@@ -50,11 +50,11 @@ const projects = [
     },
     {
         title: "video tracker",
-        description: "Application web permettant de faire des conversions mathématique d'une base mathématique à une autre.",
-        tech: "HTML / CSS / JavaScript",
-        image: "./projects_assets/calculator.gif",
-        github:"https://github.com/karimhantaou/Convertisseur",
-        site: "https://karimhantaou.github.io/Convertisseur/"
+        description: "VideoTracker est un script Python permettant d’ajouter des effets de suivi sur des vidéos afin de détecter des objets comme des personnes, des voitures ou des animaux. \n" +
+            "Facile à utiliser, il offre la possibilité de personnaliser l’affichage du tracking en ajustant différents paramètres et prend en charge plusieurs modèles YOLO d’Ultralytics pour adapter la détection selon les besoins.",
+        tech: "Python / OpenCV / Mediapipe / Ultralytics YOLO",
+        image: "./projects_assets/videotracker.png",
+        github:"https://github.com/karimhantaou/VideoTracker",
     },
     {
         title: "Mineword",
