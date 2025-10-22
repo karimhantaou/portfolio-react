@@ -44,7 +44,7 @@ const education = [
         title: "Master Of Science Epitech",
         place:"Epitech, Montpellier",
         year: "2025-2028",
-        description: "Je rejoins prochainement Epitech dans le cadre d’un Master of Science, avec pour objectif de me spécialiser davantage dans le développement.\n" +
+        description: "Actuellement étudiant à Epitech dans le cadre d’un Master of Science, avec pour objectif de me spécialiser davantage dans le développement.\n" +
             "Cette formation en alternance me permettra de continuer à monter en compétence tout en consolidant mon expérience en entreprise.\n" +
             "Je suis actuellement à la recherche d’une alternance pour accompagner ce parcours.",
         position: "80"

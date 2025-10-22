@@ -256,7 +256,7 @@ function App() {
                             <div className="dev-element-content">
                                 <p className={"dev-element-element"}>React js</p>
                                 <p className={"dev-element-element"}>Next js</p>
-                                <p className={"dev-element-element"}>Symfony</p>
+                                <p className={"dev-element-element"}>Vue js</p>
                                 <p className={"dev-element-element"}>Electron</p>
                             </div>
                         </div>
@@ -274,6 +274,7 @@ function App() {
                                 <p className={"dev-element-element"}>MySQL</p>
                                 <p className={"dev-element-element"}>MongoDB</p>
                                 <p className={"dev-element-element"}>PostgreSQL</p>
+                                <p className={"dev-element-element"}>SupaBase</p>
                             </div>
                         </div>
 
