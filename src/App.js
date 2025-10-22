@@ -391,9 +391,9 @@ function App() {
                     </div>
 
                     <div className={"graphic-right-side"}>
-                        <div className={"graphics-images-slider"}>
-                            <ReactCompareImage leftImage="./images/graphic2.png" rightImage="./images/graphic1.png" sliderLineColor={"var(--secondary-color)"} sliderPositionPercentage={0.1} className={"reactCompareImage"}/>
-                        </div>
+                        <a href={"https://github.com/karimhantaou/VideoTracker"} className={"graphics-images-slider"}>
+                            <img src={"./images/visual.gif"}/>
+                        </a>
                     </div>
 
                 </div>

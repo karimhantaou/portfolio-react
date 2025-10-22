@@ -500,6 +500,15 @@ a {
     width: 100%;
 }
 
+.graphics-images-slider img{
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.graphics-images-slider img:hover{
+    transform: scale(1.2);
+}
+
 .projects h1{
     display: flex;
     justify-content: center;
