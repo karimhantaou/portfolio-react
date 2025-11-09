@@ -21,15 +21,13 @@ import './style/Timeline.css';
 
 // Composants
 import VerticalLine from "./components/VerticalLine";
-import NavBar from "./components/NavBar";
 import CopyText from "./components/CopyText";
 import { EmblaCarousel } from "./components/EmblaCarousel";
 import { Timeline } from './components/Timeline';
 import ResolutionWarning from "./components/ResolutionWarning";
-import education from "./Data/Education";
 import Marquee from "react-fast-marquee";
-import ReactCompareImage from 'react-compare-image';
 import HorizontalLine from "./components/HorizontalLine";
+import ContactForm from "./components/ContactForm";
 
 // Fonction principale de l'application
 function App() {
@@ -61,7 +59,7 @@ function App() {
         setThemeState(theme);
     };
 
-    // Toggle light/dark mode
+    // light/dark mode
     const changeTheme = () => {
         const nextTheme = theme === 'dark' ? 'light' : 'dark';
         applyTheme(nextTheme);
@@ -142,8 +140,8 @@ function App() {
                     </a>
 
                     <p className="social-links">
-                        <a href="#contact" className="zp-anim"><FaGithub size={40} /></a>
-                        <a href="#contact" className="zp-anim"><FaLinkedin size={40} /></a>
+                        <a href="https://github.com/karimhantaou/" className="zp-anim"><FaGithub size={40} /></a>
+                        <a href="https://www.linkedin.com/in/karim-hantaou/" className="zp-anim"><FaLinkedin size={40} /></a>
                         <a href="#contact" className="zp-anim"><IoMdMail size={40} /></a>
                     </p>
 
@@ -435,15 +433,19 @@ function App() {
 
 
                 <div className={"contact-container"}>
-                    <div className="mail-container">
-                        <p className="copy-notification">Mail copié !</p>
-                        <CopyText text="karim.hantaou@gmail.com" />
-                    </div>
 
                     <div className="social-links">
                         <a href="https://github.com/karimhantaou/"><FaGithub size={50} className="zp-anim" /></a>
                         <a href="https://www.linkedin.com/in/karim-hantaou/"><FaLinkedin size={50} className="zp-anim" /></a>
                     </div>
+
+                    <div className="mail-container">
+                        <p className="copy-notification">Mail copié !</p>
+                        <CopyText text="karim.hantaou@gmail.com" />
+                    </div>
+
+                    <ContactForm/>
+
                 </div>
             </div>
 
