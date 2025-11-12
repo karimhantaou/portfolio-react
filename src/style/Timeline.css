@@ -2,8 +2,8 @@
     position: relative;
     width: 65%;
     min-height: 400px;
-    height: 50%;
-    font-size: clamp(0.8rem, 0.8vw, 3em); /* Adaptable selon écran */
+    height: 100%;
+    font-size: clamp(0.8rem, 0.8vw, 3em);
 }
 
 .circle{

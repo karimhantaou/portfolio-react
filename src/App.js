@@ -11,7 +11,6 @@ import { SiIonos, SiOvh} from "react-icons/si";
 import { HiMiniGlobeAlt } from "react-icons/hi2";
 import { AiFillPicture } from "react-icons/ai";
 
-
 // Styles
 import './style/Main.css';
 import './style/NavBar.css';
@@ -84,20 +83,6 @@ function App() {
             if (navRef.current) observer.unobserve(navRef.current);
         };
     }, []);
-
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetID = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetID);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
 
 
     // Gère le clic sur un pin dans le parcours
@@ -198,7 +183,7 @@ function App() {
                         <a href={"#network"}>En savoir plus</a>
                     </div>
                     <div className={"graphics-skills-container"}>
-                        <h2> <FaPaintbrush/> Création visuel</h2>
+                        <h2> <FaPaintbrush/> Création visuelle</h2>
                         <ul>
                             <li>Montage photo</li>
                             <li>Montage vidéo</li>
@@ -407,9 +392,6 @@ function App() {
 
             <div className="section career" id="career">
                 <h1>Mon parcours</h1>
-                <p style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
-                    Cliquez sur l'un des pins pour en savoir plus
-                </p>
 
                 <Timeline onPinClick={handlePinClick} />
 

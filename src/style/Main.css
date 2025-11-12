@@ -10,7 +10,7 @@
 /* Scroll fluide */
 html {
     scroll-behavior: smooth;
-    min-width: 1400;
+    min-width: 1400px;
     min-height: 707px;
 }
 
@@ -19,6 +19,7 @@ html, body {
     height: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 /* Liens sans soulignement */
@@ -629,10 +630,12 @@ a {
     align-items: center;
     width: 100%;
     height: 20%;
-    font-size: clamp(2rem, 2vw, 3rem); /* Adaptable selon écran */
+    font-size: clamp(2rem, 2vw, 3rem);
+
 }
 
 .career-info {
+    background-color: blue;
     width: 70%;
     height: 20%;
 }
@@ -708,6 +711,9 @@ a {
     box-shadow: 0 0 10px var(--secondary-color);
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .popup-close {
